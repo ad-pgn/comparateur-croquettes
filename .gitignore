@@ -1,0 +1,29 @@
+# Secrets et configuration locale
+.env
+.env.*
+!.env.example
+
+# Dépendances
+node_modules/
+vendor/
+
+# Builds et fichiers générés
+dist/
+build/
+coverage/
+
+# Sauvegardes de base de données (peuvent contenir des données personnelles)
+backups/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Systèmes d'exploitation
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Éditeur (seules les extensions recommandées sont partagées)
+.vscode/*
+!.vscode/extensions.json
