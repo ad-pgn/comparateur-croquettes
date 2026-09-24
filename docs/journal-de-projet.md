@@ -215,6 +215,35 @@
 
 ## 4. Mise en place du projet
 
+### Étape 4.1 — Création du dépôt (24/09/2026)
+- Dépôt public créé avec GitHub CLI : https://github.com/ad-pgn/comparateur-croquettes (branche par défaut : `main`).
+- Premier commit : `.gitignore`, `README.md`, `docs/` (expression des besoins v1.1, journal de projet).
+- `.gitignore` créé avant le premier `git add` : secrets (`.env`), dépendances, builds, sauvegardes de base (`backups/`),
+  fichiers système et éditeur.
+- Confidentialité : adresse e-mail GitHub privée (noreply) utilisée pour les commits ;
+  blocage des push exposant l'adresse personnelle activé.
+- README : aucune fonctionnalité présentée comme réalisée ; résumé en anglais.
+
+### Étape 4.2 — Conventions de travail (24/09/2026)
+
+#### Décision : GitHub Flow
+- Règle : `main` toujours stable, sans commit direct ; une branche courte par issue ; fusion par pull request.
+- Raisons : modèle simple adapté à un développeur seul ; traçabilité de chaque évolution par une pull request ;
+  vérifications automatiques possibles avant fusion.
+- Alternatives écartées : Git Flow (complexité inutile sans versions planifiées) ; commits directs sur `main` (aucune trace de revue).
+
+#### Décision : Conventional Commits et « Squash and merge »
+- Règle : messages `type(portée): description` en anglais ; un commit par pull request sur `main`.
+- Raisons : historique de `main` lisible comme un journal des fonctionnalités ; détail conservé dans chaque pull request.
+- Conséquences : options du dépôt limitées au « Squash and merge » ; suppression automatique des branches fusionnées.
+
+#### Décision : répartition des langues
+- Règle : code, commits, branches, pull requests et documentation technique en anglais ;
+  documentation fonctionnelle en français.
+- Raisons : pratique professionnelle courante ; démonstration de la compétence « anglais » ; documents d'examen en français.
+
+- Livrables : `CONTRIBUTING.md`, `.github/pull_request_template.md`.
+
 ## 5. Développement
 
 ## 6. Tests
