@@ -270,11 +270,39 @@
   avant de développer la consultation.
 - Conséquences : aucune date d'échéance (pas de date de rendu imposée) ; ordre révisable après la conception.
 
+### Étape 4.5 — Issues et tableau de suivi (25/09/2026)
+
+#### Décision : issues rédigées en français
+- Raisons : issues issues directement de l'expression des besoins (user stories et critères d'acceptation repris à l'identique) ;
+  lisibilité pour le mentor et le jury.
+- Alternative écartée : issues en anglais (cohérence avec les commits et pull requests).
+- Conséquences : `CONTRIBUTING.md` mis à jour ; labels et milestones conservés en anglais.
+
+#### Réalisation
+- 40 issues créées par un script PowerShell (liste JSON + un fichier Markdown par issue), conservé hors du dépôt :
+  10 tâches de conception (M1), 22 user stories MVP, 5 user stories complémentaires, 3 livrables d'examen (M9).
+- Script sans effet de doublon : il ignore les issues dont le titre existe déjà ; exécution à blanc avant création.
+- Chaque issue porte ses labels (type, partie, priorité, compétence) et son milestone ;
+  critères d'acceptation sous forme de cases à cocher.
+- Tâches du socle technique (M2) et de qualité (M8) : créées après la conception (dépendantes de la stack).
+- Modèles d'issues en français (user story, tâche, bug) ; création d'issues vierges désactivée.
+- GitHub Project public « comparateur-croquettes » lié au dépôt : vue Kanban (Todo / In Progress / Done) ;
+  passage automatique en Done à la fermeture d'une issue ou à la fusion d'une pull request ;
+  ajout automatique des nouvelles issues et pull requests.
+
 ## 5. Développement
 
 ## 6. Tests
 
 ## 7. Difficultés rencontrées et solutions
+
+### Difficulté : guillemets imbriqués dans une commande `gh` sous PowerShell (24/09/2026)
+- Problème : `gh api ... --jq ".[] | \"\(.number) - \(.title)\""` échoue avec
+  « Le terme .number n'est pas reconnu comme nom d'applet de commande ».
+- Cause : PowerShell n'utilise pas la barre oblique inverse comme caractère d'échappement (c'est la syntaxe de Bash) ;
+  la chaîne se termine trop tôt et la suite est interprétée comme une commande.
+- Solution : expression jq sans guillemets imbriqués (`--jq ".[].title"`).
+- Enseignement : vérifier la compatibilité d'une commande avec le shell utilisé (PowerShell sous Windows, Bash sous Linux).
 
 ## 8. Veille technologique et sécurité
 
