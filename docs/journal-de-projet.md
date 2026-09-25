@@ -241,8 +241,34 @@
 - Règle : code, commits, branches, pull requests et documentation technique en anglais ;
   documentation fonctionnelle en français.
 - Raisons : pratique professionnelle courante ; démonstration de la compétence « anglais » ; documents d'examen en français.
-
 - Livrables : `CONTRIBUTING.md`, `.github/pull_request_template.md`.
+
+### Étape 4.3 — Sécurisation du dépôt (24/09/2026)
+- Ruleset « Protect main » (branche par défaut) : suppression interdite, force push interdit,
+  modifications uniquement par pull request (0 approbation requise : un auteur ne peut pas approuver sa propre pull request).
+- Détection de secrets et protection des push contre les secrets : activées.
+- Dependabot : alertes de vulnérabilités et correctifs de sécurité automatiques activés.
+- Fusion : titre de la pull request imposé comme titre du commit « squash » ; liste des commits conservée dans la description.
+- Wiki désactivé : documentation centralisée et versionnée dans le dépôt.
+- Test : push direct d'un commit vide sur `main` refusé (erreur GH013, « Changes must be made through a pull request ») ;
+  commit de test annulé en local. Capture d'écran conservée comme preuve.
+- Évolution prévue : exiger la réussite de l'intégration continue avant fusion, une fois celle-ci en place.
+
+### Étape 4.4 — Labels et milestones (24/09/2026)
+
+#### Décision : quatre familles de labels
+- Familles : `type:` (nature du travail), `area:` (partie du projet), `priority:` (MVP ou complémentaire),
+  `cp1:` à `cp8:` (compétence du référentiel).
+- Raisons : filtrage des issues par compétence pour construire la matrice compétence → réalisation → preuve ;
+  repérage rapide du travail de sécurité et d'accessibilité.
+- Conséquences : labels par défaut de GitHub supprimés ; 24 labels créés.
+
+#### Décision : neuf milestones dans l'ordre de développement
+- Milestones : M1 Design, M2 Technical foundation, M3 Authentication, M4 Catalog administration,
+  M5 Search and product pages, M6 Comparison, M7 Member area, M8 Quality and delivery, M9 Exam deliverables.
+- Raisons : l'authentification conditionne l'accès au back-office ; le back-office permet de saisir les données réelles
+  avant de développer la consultation.
+- Conséquences : aucune date d'échéance (pas de date de rendu imposée) ; ordre révisable après la conception.
 
 ## 5. Développement
 
