@@ -3,7 +3,8 @@
 ## Languages
 
 - Code, commit messages, branch names, pull requests and technical documentation: **English**.
-- Functional documentation (`docs/expression-des-besoins.md`, `docs/journal-de-projet.md`): **French**.
+- Issues and functional documentation (`docs/expression-des-besoins.md`, `docs/journal-de-projet.md`): **French**.
+- Labels and milestones: **English**.
 
 ## Branching model (GitHub Flow)
 

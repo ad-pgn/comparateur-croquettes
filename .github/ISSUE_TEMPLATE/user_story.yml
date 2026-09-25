@@ -1,0 +1,31 @@
+name: User story
+description: Fonctionnalité décrite du point de vue de l'utilisateur.
+title: "US-XX - "
+labels: ["type: feature"]
+body:
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      description: "En tant que <rôle>, je veux <objectif> afin de <bénéfice>."
+    validations:
+      required: true
+  - type: input
+    id: reference
+    attributes:
+      label: Référence
+      description: User story et règles métier dans docs/expression-des-besoins.md
+      placeholder: "US-XX, RG-XX"
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Critères d'acceptation
+      description: Une case à cocher par critère (Étant donné / Quand / Alors).
+      value: |
+        - [ ] Étant donné ..., quand ..., alors ...
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes

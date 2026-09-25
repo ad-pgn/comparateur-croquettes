@@ -1,0 +1,31 @@
+name: Tâche
+description: Tâche technique, de conception ou de documentation qui n'est pas une user story.
+labels: []
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objectif
+      description: Que doit accomplir cette tâche, et pourquoi ?
+    validations:
+      required: true
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tâches
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: done
+    attributes:
+      label: Définition de terminé
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: textarea
+    id: references
+    attributes:
+      label: Références
