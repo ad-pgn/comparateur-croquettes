@@ -213,6 +213,44 @@
 
 ## 3. Conception
 
+### Issue #3 — Choix de la stack technique (25/09/2026)
+
+#### Décision : Next.js + API Express + MySQL + MongoDB
+- Raisons :
+  - rendu côté serveur des pages publiques : référencement exigé par la CP3 et indispensable à l'exploitation réelle d'un comparateur ;
+  - React conservé (technologie maîtrisée) ; Next.js déjà abordé en formation ;
+  - API Express séparée : back-end identifiable, testable, organisé en couches et en classes (CP5 à CP7) ;
+  - technologie très demandée en entreprise (portfolio).
+- Alternatives écartées :
+  - React en SPA + Express : pages construites en JavaScript dans le navigateur, référencement faible ;
+  - Symfony (rendu Twig) : technologie la moins maîtrisée, abandon de React au profit de JavaScript sans framework ;
+  - Symfony en API + React en SPA : solution la plus lourde, même faiblesse de référencement ;
+  - Laravel : hors du programme de formation.
+- Conséquences :
+  - POO et sécurité à construire volontairement dans l'API (contrôleurs, services, accès aux données en classes) ;
+  - Next.js limité à l'affichage : aucune logique métier côté Next.js ;
+  - deux applications Node.js et deux bases de données à orchestrer ;
+  - Next.js à approfondir (composants serveur et client, mise en cache).
+
+#### Décision : choix secondaires
+- Langage : JavaScript, documenté avec JSDoc en anglais. 
+- Base relationnelle : MySQL (déjà pratiqué ; script SQL généré depuis le MLD de Looping).
+- Accès à MySQL : Sequelize, branché sur un schéma créé par un script SQL issu du MLD.
+  La synchronisation automatique du schéma par Sequelize est écartée : le script SQL reste la source de vérité et la preuve de la CP5.
+- Accès à MongoDB : décidé dans l'issue #7 (rôle du NoSQL et flux d'import).
+- Tests : Vitest (front-end et back-end) et Supertest (API) ; un seul outil de test à maîtriser.
+- Qualité : ESLint et Prettier ; intégration continue avec GitHub Actions (linter et tests).
+- Docker (développement) : MySQL, MongoDB et un outil d'administration en conteneurs ;
+  Next.js et Express exécutés sur la machine hôte. Prérequis : WSL 2 pour Docker Desktop sous Windows.
+- Styles : Sass avec CSS Modules, sans framework CSS.
+  - Raisons : meilleure démonstration de la CP3 ; fidélité à une charte sobre ; CSS limité au nécessaire (éco-conception) ;
+    pas de conflit de classes entre composants.
+  - Alternative écartée : Bootstrap (moins de CSS personnel, dépendance React-Bootstrap, rendu générique, poids du CSS).
+  - Conséquences : création en premier d'une base commune (variables CSS issues de la charte, composants réutilisables :
+    bouton, champ de formulaire, carte, tableau, boîte de dialogue) ; recours aux éléments HTML natifs accessibles
+    (`<dialog>`, `<details>`).
+- Authentification (sessions ou jetons) : décidée dans l'issue #4 (architecture).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)
