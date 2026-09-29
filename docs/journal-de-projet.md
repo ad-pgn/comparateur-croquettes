@@ -251,6 +251,41 @@
     (`<dialog>`, `<details>`).
 - Authentification (sessions ou jetons) : décidée dans l'issue #4 (architecture).
 
+### Issue #4 — Architecture logicielle (29/09/2026)
+
+#### Décision : domaine unique pour Next.js et l'API
+- Règle : pages servies sur `/...` par Next.js, données servies sur `/api/...` par Express ; aiguillage par un reverse proxy
+  en production et par les `rewrites` de Next.js en développement ; appels internes directs de Next.js vers l'API pour le rendu serveur.
+- Raisons : cookies de session sans configuration inter-domaines ; aucune configuration CORS (source d'erreurs de sécurité en moins).
+- Alternative écartée : API sur un domaine ou un port distinct, appelée directement par le navigateur.
+
+#### Décision : stratégie de rendu
+- Rendu serveur : accueil, résultats, fiche produit, pages légales (référencement).
+- Rendu client : filtres, tri, sélection, comparateur ; espace membre et back-office exclus de l'indexation.
+- Filtres et sélection de comparaison inscrits dans l'URL : partage par lien, bouton « Retour » fonctionnel, rendu serveur des bons résultats.
+
+#### Décision : sessions côté serveur stockées dans MySQL
+- Mesures : cookie `httpOnly`, `Secure` (production), `SameSite=Lax` ; vérification de l'en-tête `Origin` sur les requêtes
+  de modification ; nouvel identifiant de session à la connexion ; session supprimée à la déconnexion et à la suppression du compte ;
+  hachage Argon2id ; limitation des tentatives de connexion ; message d'erreur générique.
+- Raisons : révocation immédiate ; identifiant illisible par JavaScript ; complexité faible ; pas de service supplémentaire.
+- Alternative écartée : JWT (révocation difficile, exposition en `localStorage`, adapté à plusieurs services ou applications mobiles).
+- Principe : la sécurité est vérifiée par l'API, jamais seulement par l'interface.
+
+#### Décision : API en couches, en programmation orientée objet
+- Couches : routes, middlewares, contrôleurs, services (règles métier et transactions), calculateurs (calculs purs),
+  repositories (accès aux données).
+- Injection des dépendances par constructeur (tests unitaires sans base de données) ; validation des entrées avec Zod ;
+  erreurs typées gérées par un middleware central (aucun détail technique renvoyé au client) ; en-têtes de sécurité avec Helmet.
+- Raisons : séparation des responsabilités, testabilité, démonstration de la POO (CP7).
+
+#### Décision : structure du dépôt
+- Dossiers `api/`, `web/`, `database/`, `docs/`, `.github/` et `docker-compose.yml` à la racine ; un `package.json` par application,
+  sans outil de monorepo.
+- Raison : preuves de la CP5 regroupées dans `database/` ; complexité limitée.
+
+- Livrable : `docs/architecture.md` (en anglais, schémas Mermaid).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)
