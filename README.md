@@ -24,7 +24,17 @@ Status: design phase — no feature implemented yet.
 
 ## Stack technique
 
-En cours de définition (phase de conception).
+Choix validés en phase de conception. Mise en place à venir.
+
+| Couche | Technologies |
+|---|---|
+| Front-end | Next.js (React), Sass avec CSS Modules |
+| Back-end | API REST Node.js / Express |
+| Base relationnelle | MySQL, Sequelize |
+| Base NoSQL | MongoDB (rôle précisé en conception) |
+| Tests | Vitest, Supertest |
+| Qualité | ESLint, Prettier, GitHub Actions |
+| Environnement de développement | Docker (bases de données) |
 
 ## Données
 
