@@ -21,6 +21,7 @@ Status: design phase — no feature implemented yet.
 
 - [Expression des besoins](docs/expression-des-besoins.md)
 - [Journal de projet](docs/journal-de-projet.md)
+- [Architecture (EN)](docs/architecture.md)
 
 ## Stack technique
 
