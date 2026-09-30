@@ -22,6 +22,7 @@ Status: design phase — no feature implemented yet.
 - [Expression des besoins](docs/expression-des-besoins.md)
 - [Journal de projet](docs/journal-de-projet.md)
 - [Architecture (EN)](docs/architecture.md)
+- [Data dictionary (EN)](docs/data-model/data-dictionary.md)
 
 ## Stack technique
 

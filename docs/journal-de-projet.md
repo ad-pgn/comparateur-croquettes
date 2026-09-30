@@ -286,6 +286,49 @@
 
 - Livrable : `docs/architecture.md` (en anglais, schémas Mermaid).
 
+### Issue #5 — Modèle conceptuel de données (30/09/2026)
+
+#### Contenu
+- 17 entités : catalogue (BRAND, PRODUCT_LINE, PRODUCT, PACKAGING, SPECIES, FOOD_TYPE, LIFE_STAGE, BODY_SIZE, SPECIFIC_NEED),
+  composition (INGREDIENT, ADDITIVE, CONSTITUENT), prix et traçabilité (PRICE_RECORD, SELLER, DATA_SOURCE),
+  utilisateurs (USER_ACCOUNT, COMPARISON).
+- 19 associations : 11 « un à plusieurs », 8 « plusieurs à plusieurs » (dont 5 avec attributs portés).
+- Livrables : `docs/data-model/mcd.loo`, `docs/data-model/mcd.png`, `docs/data-model/data-dictionary.md` (en anglais).
+
+#### Décision : constituants analytiques en entité (CONSTITUENT + association PRODUCT_CONSTITUENT)
+- Raisons : ajout d'un constituant sans modifier la structure de la base (ex. taurine pour les chats) ; affichage générique
+  dans le comparateur.
+- Alternative écartée : une colonne par constituant dans PRODUCT (structure rigide, nombreuses colonnes vides).
+- Conséquences : filtres par sous-requêtes ; validation des valeurs dans l'API plutôt que par CHECK ; attribut `is_mandatory`
+  pour les quatre constituants obligatoires sur l'étiquette (protéines, matières grasses, fibres, cendres).
+
+#### Décision : « sans céréales » = déclaration du fabricant
+- Raison : donnée factuelle, cohérente avec la règle de neutralité (RG-12).
+- Alternative écartée : déduction à partir des ingrédients (frontière floue : quinoa, sarrasin…).
+
+#### Décision : pas d'entité fabricant (groupe industriel)
+- Raison : aucune fonctionnalité ne l'utilise ; ajout ultérieur possible sans refonte.
+
+#### Décision : noms en anglais, identifiants `<entité>_id`
+- Raisons : cohérence avec le code ; génération directe du script SQL ; clés étrangères aux noms explicites.
+- Mots réservés ou ambigus de MySQL évités (`range`, `rank`, `user`, `source`, `value`, `type`, `format`).
+- Entités en majuscules dans le MCD (convention Merise) ; tables en minuscules dans le script SQL.
+
+#### Choix de conception
+- Produit relié à la marque par sa gamme uniquement (pas de redondance, troisième forme normale).
+- Code EAN porté par le format (un code-barres par taille de sac).
+- Prix au kilo non stocké (calculé, RG-05).
+- Composition conservée sous deux formes : texte de l'étiquette (fidélité) et liste normalisée (filtres).
+- Types : DECIMAL pour les prix et les valeurs nutritionnelles (valeurs exactes), poids en grammes entiers, EAN en texte.
+- Règles non exprimables dans le MCD, vérifiées par l'API : 2 à 4 produits par comparaison (RG-13), conditions de publication
+  (RG-10), cohérence des stades de vie et gabarits avec l'espèce du produit.
+
+#### Erreurs initiales et corrections
+- Contrainte UNIQUE cochée sur des attributs non uniques (ex. `role`, `category`, `net_weight_g`) :
+  une seule valeur aurait été autorisée par table. Corrigé après relecture du dictionnaire des données.
+- `amount` initialement en DECIMAL(6,3) (999,999 au maximum, insuffisant pour les valeurs en mg/kg) : passé en DECIMAL(10,3).
+- Unicité par marque (gamme) ou par espèce (stade de vie, gabarit) : non exprimable par une case UNIQUE, reportée au MLD (issue #6).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)
