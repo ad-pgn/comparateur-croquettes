@@ -329,6 +329,33 @@
 - `amount` initialement en DECIMAL(6,3) (999,999 au maximum, insuffisant pour les valeurs en mg/kg) : passé en DECIMAL(10,3).
 - Unicité par marque (gamme) ou par espèce (stade de vie, gabarit) : non exprimable par une case UNIQUE, reportée au MLD (issue #6).
 
+### Issue #6 — Modèle logique de données (01/10/2026)
+
+#### Contenu
+- MLD généré par Looping : 25 tables (17 entités, 8 tables de liaison).
+- Règles de passage : chaque entité devient une table ; association « un à plusieurs » → clé étrangère du côté (1,1) ;
+  association « plusieurs à plusieurs » → table de liaison à clé primaire composée, avec ses attributs portés.
+- Colonne technique `product.version` ajoutée (verrou optimiste, RG-18) ; MCD réexporté.
+- Livrables : `docs/data-model/mld.png` ; section « Logical data model » du dictionnaire des données
+  (schéma relationnel, unicités, CHECK, clés étrangères, index).
+  - Fichier Looping renommé en `mcd.loo` (commité par erreur sous le nom `Looping1.loo` lors de l'issue #5).
+
+#### Décisions
+- Unicités composées : gamme par marque, stade de vie et gabarit par espèce, rang d'un ingrédient par produit.
+- Listes de valeurs en VARCHAR + CHECK plutôt qu'en ENUM (tri par ordre de déclaration, type propre à MySQL).
+  Table de référence écartée (excessive pour trois valeurs).
+- `comparison_product.display_order` limité de 1 à 4 : maximum de la RG-13 garanti par la base.
+- Suppression : RESTRICT pour les référentiels et les éléments en usage, CASCADE pour les données dépendantes
+  (formats, prix, sources, liens) et pour les données d'un compte supprimé (RG-17).
+- Un produit présent dans des favoris ou des comparaisons ne peut pas être supprimé, seulement archivé (cohérence avec la RG-11).
+- Trois index ajoutés pour des requêtes identifiées ; index des clés étrangères créés automatiquement par InnoDB.
+
+#### Constat
+- Script SQL de Looping non exécutable tel quel sous MySQL : types génériques (COUNTER, LOGICAL), noms en majuscules,
+  aucune règle de suppression, aucun CHECK ni unicité composée.
+- Script physique à écrire et tester dans le milestone M2, une fois MySQL disponible dans Docker. Le script de Looping
+  n'est pas versionné.
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)

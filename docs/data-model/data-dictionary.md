@@ -47,6 +47,7 @@
 | `verification_status` | VARCHAR(20) | Yes | `verified` or `unverified` (RG-08) |
 | `created_at` | DATETIME | Yes | Creation date |
 | `updated_at` | DATETIME | Yes | Last update date |
+| `version` | INT | Yes | Optimistic locking counter, incremented on each update (RG-18) |
 
 ### packaging — Package size (format)
 
@@ -255,3 +256,121 @@ These rules cannot be expressed with cardinalities; they are enforced by the API
 - a product can only be published when complete (RG-10);
 - the life stages and sizes of a product belong to the same species as the product;
 - a price record comes from an allowed seller (RG-04).
+
+---
+
+## 7. Logical data model
+
+Generated with Looping from the conceptual data model: 25 tables (17 entities and 8 join tables).
+The physical SQL script (MySQL) is written and tested in milestone M2.
+
+### Relational schema
+
+Notation: primary key in **bold**, foreign key prefixed with `#`.
+
+- brand(**brand_id**, name, slug, website_url)
+- product_line(**product_line_id**, name, slug, #brand_id)
+- species(**species_id**, name)
+- food_type(**food_type_id**, name)
+- life_stage(**life_stage_id**, name, #species_id)
+- body_size(**body_size_id**, name, #species_id)
+- specific_need(**specific_need_id**, name)
+- product(**product_id**, name, slug, label_composition, grain_free, status, verification_status, created_at, updated_at, version, #product_line_id, #species_id, #food_type_id)
+- packaging(**packaging_id**, net_weight_g, ean, #product_id)
+- seller(**seller_id**, name, website_url)
+- price_record(**price_record_id**, price, price_type, recorded_on, url, #packaging_id, #seller_id)
+- data_source(**data_source_id**, source_type, url, consulted_on, external_id, #product_id)
+- ingredient(**ingredient_id**, name)
+- additive(**additive_id**, name, eu_code, category, functional_group)
+- constituent(**constituent_id**, name, unit, is_mandatory, display_order)
+- user_account(**user_account_id**, email, password_hash, role, privacy_accepted_at, created_at)
+- comparison(**comparison_id**, name, created_at, #user_account_id)
+- product_life_stage(**#product_id, #life_stage_id**)
+- product_body_size(**#product_id, #body_size_id**)
+- product_specific_need(**#product_id, #specific_need_id**)
+- product_ingredient(**#product_id, #ingredient_id**, label_order, percentage, label_wording)
+- product_additive(**#product_id, #additive_id**, quantity, unit)
+- product_constituent(**#product_id, #constituent_id**, amount)
+- favorite(**#user_account_id, #product_id**, added_at)
+- comparison_product(**#comparison_id, #product_id**, display_order)
+
+The composite primary key of a join table also prevents duplicates: for example, a product can only be added once
+to a member's favourites (RG-16).
+
+### Unique constraints
+
+In addition to primary keys and the single-column unique constraints listed above:
+
+| Table | Columns | Reason |
+|---|---|---|
+| `product_line` | (`brand_id`, `name`) | A line name is unique within its brand |
+| `product_line` | (`brand_id`, `slug`) | A line slug is unique within its brand |
+| `life_stage` | (`species_id`, `name`) | A life stage is unique within its species |
+| `body_size` | (`species_id`, `name`) | A size is unique within its species |
+| `product_ingredient` | (`product_id`, `label_order`) | Two ingredients cannot share the same position on a label |
+
+### Check constraints
+
+List values are stored as `VARCHAR` with a `CHECK` constraint rather than MySQL `ENUM`
+(`ENUM` sorts by declaration order and is MySQL-specific).
+
+| Table.column | Condition |
+|---|---|
+| `product.status` | in (`draft`, `published`, `archived`) |
+| `product.verification_status` | in (`verified`, `unverified`) |
+| `user_account.role` | in (`member`, `admin`) |
+| `price_record.price_type` | in (`rrp`, `direct`, `retailer`) |
+| `data_source.source_type` | in (`manufacturer_website`, `label`, `open_pet_food_facts`) |
+| `packaging.net_weight_g` | > 0 |
+| `price_record.price` | > 0 |
+| `product_ingredient.label_order` | >= 1 |
+| `product_ingredient.percentage` | between 0 and 100 |
+| `product_additive.quantity` | >= 0 |
+| `product_constituent.amount` | >= 0 |
+| `comparison_product.display_order` | between 1 and 4 (maximum of RG-13; the minimum of 2 products is checked by the API) |
+
+### Foreign keys and delete behaviour
+
+`RESTRICT`: deletion is refused while the row is referenced. `CASCADE`: dependent rows are deleted too.
+Identifiers are surrogate keys that never change, so no `ON UPDATE` action is needed.
+
+| Foreign key | References | On delete | Reason |
+|---|---|---|---|
+| `product_line.brand_id` | `brand` | RESTRICT | A brand in use cannot be deleted (US-16) |
+| `product.product_line_id` | `product_line` | RESTRICT | A line in use cannot be deleted (US-16) |
+| `product.species_id` | `species` | RESTRICT | Reference data |
+| `product.food_type_id` | `food_type` | RESTRICT | Reference data |
+| `life_stage.species_id` | `species` | RESTRICT | Reference data |
+| `body_size.species_id` | `species` | RESTRICT | Reference data |
+| `packaging.product_id` | `product` | CASCADE | A package size does not exist without its product |
+| `price_record.packaging_id` | `packaging` | CASCADE | A price record does not exist without its package size |
+| `price_record.seller_id` | `seller` | RESTRICT | A price record keeps its source |
+| `data_source.product_id` | `product` | CASCADE | A source does not exist without its product |
+| `product_life_stage.product_id`, `product_body_size.product_id`, `product_specific_need.product_id`, `product_ingredient.product_id`, `product_additive.product_id`, `product_constituent.product_id` | `product` | CASCADE | Links are deleted with the product |
+| `product_life_stage.life_stage_id`, `product_body_size.body_size_id`, `product_specific_need.specific_need_id`, `product_ingredient.ingredient_id`, `product_additive.additive_id`, `product_constituent.constituent_id` | reference tables | RESTRICT | A reference item in use cannot be deleted (US-18) |
+| `comparison.user_account_id` | `user_account` | CASCADE | Account deletion erases the member's data (RG-17) |
+| `favorite.user_account_id` | `user_account` | CASCADE | Same reason (RG-17) |
+| `comparison_product.comparison_id` | `comparison` | CASCADE | Links are deleted with the comparison |
+| `favorite.product_id` | `product` | RESTRICT | A product used by a member is archived, never deleted (RG-11) |
+| `comparison_product.product_id` | `product` | RESTRICT | Same reason (RG-11) |
+
+Consequence: only products never used by members (typically drafts) can be deleted; published products are archived.
+
+### Additional indexes
+
+InnoDB automatically indexes every foreign key column. Additional indexes are created only for known queries:
+
+| Index | Query |
+|---|---|
+| `product(status)` | Public pages only show published products |
+| `price_record(packaging_id, recorded_on)` | Latest price record of a package size |
+| `product_constituent(constituent_id, amount)` | Range filters on analytical constituents (US-02) |
+
+### To be handled in the physical script (milestone M2)
+
+- Lowercase table names, InnoDB engine (transactions and foreign keys).
+- `utf8mb4` character set with an accent-insensitive collation (a search for "proteines" finds "protéines").
+- `INT AUTO_INCREMENT` identifiers and `BOOLEAN` columns (the Looping script uses generic types).
+- Default values: `version` = 0, `created_at` and `updated_at` set automatically.
+- `session` table for authentication sessions: created by the script, because the application database user
+  is not allowed to create tables (least privilege).
