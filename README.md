@@ -23,6 +23,7 @@ Status: design phase — no feature implemented yet.
 - [Journal de projet](docs/journal-de-projet.md)
 - [Architecture (EN)](docs/architecture.md)
 - [Data dictionary (EN)](docs/data-model/data-dictionary.md)
+- [Data import (EN)](docs/data-import.md)
 
 ## Stack technique
 
