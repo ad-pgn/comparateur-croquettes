@@ -356,6 +356,42 @@
 - Script physique à écrire et tester dans le milestone M2, une fois MySQL disponible dans Docker. Le script de Looping
   n'est pas versionné.
 
+  ### Issue #7 — Rôle du NoSQL et flux d'import (05/10/2026)
+
+#### Décision : MongoDB stocke les réponses brutes de l'API Open Pet Food Facts
+- Raisons : documents volumineux, imbriqués et à structure évolutive (nouvelle structure des valeurs nutritionnelles en API v3.5) ;
+  traçabilité de ce que disait la source à une date donnée (RG-08, RG-19) ; transformation rejouable sans nouvel appel
+  (limites de débit) ; séparation entre données externes non vérifiées et données de référence vérifiées.
+- Alternatives écartées : colonne JSON dans MySQL (possible et plus simple, mais sans séparation des données ni démonstration
+  de la partie NoSQL de la CP6) ; journal des modifications des administrateurs (sans lien avec la problématique des données).
+- Accès : pilote officiel MongoDB, encapsulé dans une classe `ImportRepository`. Mongoose écarté (impose un schéma aux documents ;
+  validation déjà assurée par Zod). Validation `$jsonSchema` des métadonnées dans MongoDB.
+
+#### Décision : flux d'import
+- Vérification du code-barres (format, clé de contrôle, absence de doublon) avant tout appel externe.
+- Appel de l'API v3 avec sous-version fixée, User-Agent identifié, délai maximal et gestion des erreurs (inconnu, indisponible,
+  limite de débit, produit non destiné aux animaux).
+- Réponse brute stockée dans MongoDB, puis formulaire pré-rempli ; création du produit en brouillon non vérifié, dans une
+  transaction MySQL, après que l'administrateur a complété la gamme, l'espèce et le type d'aliment.
+- Photos non importées. Tests automatisés sur des réponses enregistrées, sans appel à l'API.
+- US-20 (issue #32) mise à jour : produit pré-rempli puis créé après validation (les clés étrangères obligatoires de `product`
+  empêchent une création automatique).
+
+#### Constats sur les données
+- Règles de l'API : v2 dépréciée, v3 recommandée ; 15 lectures par minute et par IP ; User-Agent obligatoire ;
+  aucune garantie d'exactitude ; licences ODbL (base), DbCL (contenus), CC BY-SA (images).
+- Réponse réelle analysée (Royal Canin, code-barres 3182550846127) : complétude de 35 %, ni ingrédients ni valeurs nutritionnelles,
+  nom uniquement en français, dernière modification en octobre 2022.
+- Sur les pages web, les pourcentages affichés à côté des constituants sont souvent des moyennes de catégorie, et non les valeurs du produit.
+- Conséquence : Open Pet Food Facts fournit surtout l'identification des produits ; la saisie manuelle à partir des étiquettes
+  officielles reste la source principale des données.
+
+#### Erreur initiale et correction
+- Une humidité de 40,81 % avait d'abord été lue comme une valeur du produit ; il s'agissait de la moyenne de la catégorie
+  « nourriture pour chiens » (pâtées comprises). Corrigé après comparaison de plusieurs fiches et analyse de la réponse de l'API.
+
+- Livrable : `docs/data-import.md` (en anglais).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)
