@@ -59,7 +59,7 @@ Reasons:
 | Filters, sorting, selection, comparator | Client-side | Interactivity |
 | Member area, back office | Client-side, `noindex` | Private pages, not meant to be indexed |
 
-Search filters and the comparison selection are stored **in the URL** (for example `/croquettes?size=large&stage=adult` or `/compare?products=12,15,21`):
+Search filters and the comparison selection are stored **in the URL** (for example `/croquettes?bodySize=4&lifeStage=2` or `/compare?products=12,15,21`):
 
 - a search or a comparison can be shared with a link;
 - the browser back button works as expected;
