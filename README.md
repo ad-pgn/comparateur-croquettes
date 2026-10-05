@@ -24,6 +24,7 @@ Status: design phase — no feature implemented yet.
 - [Architecture (EN)](docs/architecture.md)
 - [Data dictionary (EN)](docs/data-model/data-dictionary.md)
 - [Data import (EN)](docs/data-import.md)
+- [API contract (EN)](docs/api-contract.md)
 
 ## Stack technique
 

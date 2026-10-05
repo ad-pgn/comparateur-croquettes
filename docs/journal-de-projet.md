@@ -392,6 +392,29 @@
 
 - Livrable : `docs/data-import.md` (en anglais).
 
+### Issue #8 — Contrat de l'API REST (05/10/2026)
+
+#### Décisions
+- Pas de version dans l'URL : un seul client, déployé avec l'API.
+- Erreurs au format standard RFC 9457 (Problem Details), avec un code lisible par le programme et la liste des champs invalides ;
+  aucun détail technique renvoyé.
+- Codes HTTP : 400 pour une donnée invalide, 422 pour une règle métier non respectée (ex. RG-10), 409 pour un conflit
+  (unicité, élément en usage, modification concurrente `VERSION_CONFLICT`).
+- Pagination par numéro de page (20 par défaut, 50 au maximum) ; tri `?sort=` avec `-` pour l'ordre décroissant.
+- Champs JSON en camelCase, colonnes en snake_case ; slugs pour les pages indexées, identifiants numériques ailleurs.
+- Filtres combinés (ET) ; plages de constituants `range=<code>:<min>:<max>` ; exclusions d'ingrédients, d'additifs et de groupes
+  fonctionnels.
+- Suppression de compte par `POST /api/me/deletion` (le corps d'une requête DELETE n'a pas de sens défini en HTTP).
+- Calculs (prix au kilo, matière sèche, relevé ancien) effectués par l'API, jamais par l'application Next.js.
+- Spécification OpenAPI à rédiger pendant le développement, en parallèle du code.
+
+#### Évolution du modèle de données
+- Ajout de `constituent.code` (VARCHAR(30), obligatoire, unique) : identifiant technique stable nécessaire à la RG-07
+  (humidité), au tri (US-04) et aux filtres par plage. Le nom affiché ne peut pas servir d'identifiant (fragile en cas de correction).
+- MCD, MLD et dictionnaire des données mis à jour.
+
+- Livrable : `docs/api-contract.md` (en anglais).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)

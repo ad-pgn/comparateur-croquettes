@@ -118,6 +118,7 @@
 | Attribute | Type | Req. | Description |
 |---|---|---|---|
 | `constituent_id` | INT, auto-increment | Yes | Identifier |
+| `code` | VARCHAR(30) | Yes | Stable technical code, unique (e.g. `protein`, `fat`, `fibre`, `ash`, `moisture`); used by business rules (RG-07) and API filters |
 | `name` | VARCHAR(100) | Yes | Constituent name, unique |
 | `unit` | VARCHAR(20) | Yes | Unit (`%`, `mg/kg`, `IU/kg`…) |
 | `is_mandatory` | BOOLEAN | Yes | Mandatory on the label (used by publication rule RG-10) |
@@ -282,7 +283,7 @@ Notation: primary key in **bold**, foreign key prefixed with `#`.
 - data_source(**data_source_id**, source_type, url, consulted_on, external_id, #product_id)
 - ingredient(**ingredient_id**, name)
 - additive(**additive_id**, name, eu_code, category, functional_group)
-- constituent(**constituent_id**, name, unit, is_mandatory, display_order)
+- constituent(**constituent_id**, code, name, unit, is_mandatory, display_order)
 - user_account(**user_account_id**, email, password_hash, role, privacy_accepted_at, created_at)
 - comparison(**comparison_id**, name, created_at, #user_account_id)
 - product_life_stage(**#product_id, #life_stage_id**)
