@@ -415,6 +415,45 @@
 
 - Livrable : `docs/api-contract.md` (en anglais).
 
+### Issue #9 — Charte graphique (08/10/2026)
+
+#### Décision : palette « sauge et ardoise » (direction A)
+- Une seule couleur de marque (vert sauge), gris neutres, fonds clairs.
+- Raisons : sobriété demandée ; le vert sauge est une couleur de marque, pas d'évaluation.
+- Alternative écartée : palette « encre et ambre » (plus contrastée, mais l'ambre attire fortement l'œil).
+- Règle de neutralité (RG-12) : aucun code vert/rouge sur les valeurs des produits ; écarts signalés par le gras et un repère
+  neutre ; rouge réservé aux erreurs de formulaire.
+- Contrastes calculés pour chaque combinaison (formule WCAG) : texte ≥ 4,5:1, éléments d'interface ≥ 3:1.
+- Thème clair uniquement dans le MVP.
+
+#### Décision : police Source Sans 3
+- Raisons : humaniste et chaleureuse tout en restant sérieuse ; très lisible en tableau ; chiffres de largeur fixe pour aligner
+  les valeurs du comparateur ; hébergée avec le site via `next/font` (aucun appel des visiteurs vers Google, RGPD).
+- Alternatives étudiées : Atkinson Hyperlegible Next, Inter, Nunito Sans, DM Sans, Lexend, Figtree, Public Sans.
+- Deux graisses (400 et 600), tailles en rem (respect du réglage de taille du navigateur).
+
+#### Erreur initiale et correction
+- Bordure des champs proposée en #8A948F : 3,13:1 sur blanc, mais 2,99:1 sur le fond de page (sous le seuil de 3:1).
+  Remplacée par #7F8984 (au moins 3,24:1 sur les trois fonds). Enseignement : vérifier un contraste sur tous les fonds
+  où la couleur apparaît.
+
+  #### Réalisation dans Figma
+- Variables : 16 couleurs (collection « Colors »), 8 espacements (« Spacing »), 2 rayons (« Radius ») ; 7 styles de texte.
+  Les éléments du guide de style sont liés aux variables, et non saisis en valeurs fixes.
+- Organisation du fichier imposée par le forfait gratuit (3 pages maximum) : « Charte et composants », « Wireframes »,
+  « Maquettes », avec des sections Mobile et Desktop à l'intérieur des pages.
+
+#### Décision : pas de maquettes tablette
+- Raisons : le référentiel demande des maquettes web et mobile ; dessiner un troisième format alourdirait le travail
+  sans apport pour l'évaluation.
+- Conséquence : maquettes mobile (375 px) et desktop (1 440 px) ; le comportement intermédiaire (points de rupture à 600,
+  900 et 1 200 px) sera démontré sur le site réel.
+- Rôles de couleur distincts à valeur identique (`primary-hover` et `primary-strong`) : nommage par rôle, pour pouvoir
+  les faire évoluer séparément.
+
+- Livrables : `docs/visual-identity.md` (en anglais, variables CSS incluses), guide de style Figma exporté
+  (`docs/design/style-guide.png`).
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)
