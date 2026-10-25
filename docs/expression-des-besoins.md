@@ -1,6 +1,6 @@
 # Expression des besoins — comparateur-croquettes
 
-> Version 1.1 — validée le 24 septembre 2026.
+> Version 1.3 — 22 octobre 2026 (US-C2 intégrée au MVP sous US-25, ajout de la RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
 > Les éléments marqués **(à valider)** restent à arrêter en conception.
 > Les éléments marqués **(hypothèse)** ne sont pas démontrés et ne doivent pas être présentés comme des faits.
 
@@ -146,7 +146,7 @@ Un administrateur n'est jamais créé par l'inscription publique (voir RG-15).
 
 - **Consultation** : recherche textuelle, filtres multicritères, tri, fiche produit sourcée.
 - **Comparaison** : sélection de 2 à 4 produits, tableau comparatif, affichage brut ou sur matière sèche, prix au kilo.
-- **Compte** : inscription, connexion, déconnexion, favoris, comparaisons sauvegardées, suppression du compte.
+- **Compte** : inscription, connexion, déconnexion, favoris, comparaisons sauvegardées, modification de l'adresse e-mail et du mot de passe, réinitialisation du mot de passe par e-mail, suppression du compte.
 - **Administration** : marques, gammes, produits, référentiels, relevés de prix, publication, gestion des conflits d'édition.
 - **Import** : import assisté depuis Open Pet Food Facts par code-barres (le rôle exact de la base NoSQL sera confirmé en conception).
 - **Transverse** : mentions légales, politique de confidentialité, attribution Open Pet Food Facts, avertissement vétérinaire, accessibilité, responsive.
@@ -154,7 +154,6 @@ Un administrateur n'est jamais créé par l'inscription publique (voir RG-15).
 **Complémentaire (si le temps le permet)**
 
 - Recherches sauvegardées.
-- Réinitialisation du mot de passe par e-mail.
 - Historique des prix d'un produit (graphique).
 - Export d'une comparaison.
 - Export des données personnelles du membre (droit à la portabilité).
@@ -201,6 +200,8 @@ Un administrateur n'est jamais créé par l'inscription publique (voir RG-15).
 | RG-18 | Modifications concurrentes | Si un produit a été modifié par un autre administrateur depuis l'ouverture du formulaire, l'enregistrement est refusé et l'administrateur est invité à recharger la fiche. |
 | RG-19 | Import Open Pet Food Facts | Un produit importé est créé en Brouillon, avec le statut « non vérifié », et l'attribution à Open Pet Food Facts est conservée. |
 | RG-20 | Avertissement | Toute page de résultat, de fiche ou de comparaison rappelle que les informations sont indicatives et ne remplacent pas l'avis d'un vétérinaire. |
+| RG-21 | Modification des identifiants | Toute modification de l'adresse e-mail ou du mot de passe exige le mot de passe actuel. La modification du mot de passe met fin à toutes les autres sessions du membre ; la session en cours reçoit un nouvel identifiant. |
+| RG-22 | Réinitialisation du mot de passe | Le lien de réinitialisation contient un jeton aléatoire, stocké uniquement sous forme d'empreinte, à usage unique et valable 1 heure. Une nouvelle demande rend les jetons précédents inutilisables. La réponse à une demande est identique, que l'adresse corresponde à un compte ou non. Après la réinitialisation, toutes les sessions du membre sont fermées. |
 
 ---
 
@@ -339,6 +340,31 @@ En tant que membre, je veux supprimer mon compte afin que mes données personnel
 - La suppression exige une confirmation (RG-17).
 - Après suppression, mes données, favoris et comparaisons n'existent plus et je suis déconnecté.
 
+**US-23 — Modifier mon adresse e-mail** (MVP)
+En tant que membre, je veux modifier mon adresse e-mail afin de garder mes informations à jour.
+- La modification exige le mot de passe actuel (RG-21) ; un mot de passe incorrect est refusé avec un message explicite.
+- La nouvelle adresse doit être valide et unique.
+- Les tentatives répétées sont limitées.
+- Un message confirme la modification.
+
+**US-24 — Modifier mon mot de passe** (MVP)
+En tant que membre, je veux modifier mon mot de passe afin de sécuriser mon compte.
+- La modification exige le mot de passe actuel (RG-21) ; un mot de passe incorrect est refusé avec un message explicite.
+- Le nouveau mot de passe respecte la RG-15 et doit être saisi deux fois de façon identique.
+- Après la modification, toutes les autres sessions du membre sont fermées et la session en cours reçoit un nouvel identifiant.
+- Les tentatives répétées sont limitées.
+- Un message confirme la modification.
+
+**US-25 — Réinitialiser mon mot de passe** (MVP)
+En tant que membre, je veux réinitialiser mon mot de passe par e-mail afin de retrouver l'accès à mon compte si je l'ai oublié.
+- La demande se fait avec l'adresse e-mail ; le message affiché est identique, que l'adresse corresponde à un compte ou non (RG-22).
+- Si un compte existe, un e-mail contenant un lien de réinitialisation est envoyé ; le lien est à usage unique et valable 1 heure.
+- Une nouvelle demande rend les liens précédents inutilisables.
+- Le nouveau mot de passe respecte la RG-15 et doit être saisi deux fois de façon identique.
+- Un lien expiré, déjà utilisé ou invalide est refusé avec un message proposant une nouvelle demande.
+- Après la réinitialisation, toutes les sessions du membre sont fermées.
+- Les demandes répétées sont limitées.
+
 ### Épopée D — Administration
 
 **US-15 — Accéder au back-office** (MVP)
@@ -385,7 +411,7 @@ En tant que visiteur, je veux accéder aux mentions légales, à la politique de
 ### User stories complémentaires (sans critères détaillés à ce stade)
 
 - US-C1 — Sauvegarder une recherche (filtres).
-- US-C2 — Réinitialiser son mot de passe par e-mail.
+- US-C2 — Intégrée au MVP sous la référence US-25 (version 1.3).
 - US-C3 — Consulter l'historique des prix d'un produit.
 - US-C4 — Exporter une comparaison.
 - US-C5 — Exporter ses données personnelles.
@@ -444,7 +470,7 @@ En tant que visiteur, je veux accéder aux mentions légales, à la politique de
 | User stories | Compétences principalement mobilisées |
 |---|---|
 | US-01 à US-08 | CP2, CP3, CP4 (interfaces, filtres dynamiques, comparateur) ; CP6 (requêtes de recherche et de filtrage) ; CP7 (règles de calcul RG-05, RG-07) |
-| US-09 à US-14 | CP4 (formulaires) ; CP7 (authentification, autorisations) ; CP6 (accès aux données) ; ENF-01 et ENF-02 |
+| US-09 à US-14, US-23 à US-25 | CP4 (formulaires) ; CP7 (authentification, autorisations) ; CP6 (accès aux données) ; ENF-01 et ENF-02 |
 | US-15 à US-21 | CP5 (modèle, contraintes d'intégrité) ; CP6 (transactions, conflits d'accès, NoSQL) ; CP7 (composants métier, appel d'un web service) |
 | US-22 | CP3 (RGPD, mentions légales) |
 | Transverse | CP1 (environnement, conteneurs) ; CP8 (procédure de déploiement) |

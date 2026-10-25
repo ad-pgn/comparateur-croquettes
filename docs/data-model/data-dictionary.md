@@ -181,6 +181,20 @@ The price per kg is **not stored**: it is calculated from `price` and `net_weigh
 | `name` | VARCHAR(100) | Yes | Name given by the member |
 | `created_at` | DATETIME | Yes | Creation date |
 
+### password_reset_token — Password reset token (jeton de réinitialisation)
+
+| Attribute | Type | Req. | Description |
+|---|---|---|---|
+| `password_reset_token_id` | INT, auto-increment | Yes | Identifier |
+| `token_hash` | CHAR(64) | Yes | SHA-256 hash of the token sent by email, unique. The token itself is never stored |
+| `expires_at` | DATETIME | Yes | Expiry date and time: 1 hour after creation (RG-22) |
+| `used_at` | DATETIME | No | Date and time of use; a used token cannot be used again |
+| `created_at` | DATETIME | Yes | Creation date |
+
+The token is hashed with SHA-256 rather than Argon2: it is random (256 bits), so it cannot be guessed and a fast hash
+is sufficient; this also allows looking it up directly by its hash. Passwords need a slow hash because they are chosen
+by humans and can be guessed.
+
 ---
 
 ## 5. Associations
@@ -200,6 +214,7 @@ The price per kg is **not stored**: it is calculated from `price` and `net_weigh
 | `supplies` | seller (0,n) | price_record (1,1) |
 | `documents` | product (0,n) | data_source (1,1) |
 | `creates` | user_account (0,n) | comparison (1,1) |
+| `requests` | user_account (0,n) | password_reset_token (1,1) |
 
 ### Many-to-many associations (they become tables)
 
@@ -262,7 +277,7 @@ These rules cannot be expressed with cardinalities; they are enforced by the API
 
 ## 7. Logical data model
 
-Generated with Looping from the conceptual data model: 25 tables (17 entities and 8 join tables).
+Generated with Looping from the conceptual data model: 26 tables (18 entities and 8 join tables).
 The physical SQL script (MySQL) is written and tested in milestone M2.
 
 ### Relational schema
@@ -286,6 +301,7 @@ Notation: primary key in **bold**, foreign key prefixed with `#`.
 - constituent(**constituent_id**, code, name, unit, is_mandatory, display_order)
 - user_account(**user_account_id**, email, password_hash, role, privacy_accepted_at, created_at)
 - comparison(**comparison_id**, name, created_at, #user_account_id)
+- password_reset_token(**password_reset_token_id**, token_hash, expires_at, used_at, created_at, #user_account_id)
 - product_life_stage(**#product_id, #life_stage_id**)
 - product_body_size(**#product_id, #body_size_id**)
 - product_specific_need(**#product_id, #specific_need_id**)
@@ -351,6 +367,7 @@ Identifiers are surrogate keys that never change, so no `ON UPDATE` action is ne
 | `product_life_stage.life_stage_id`, `product_body_size.body_size_id`, `product_specific_need.specific_need_id`, `product_ingredient.ingredient_id`, `product_additive.additive_id`, `product_constituent.constituent_id` | reference tables | RESTRICT | A reference item in use cannot be deleted (US-18) |
 | `comparison.user_account_id` | `user_account` | CASCADE | Account deletion erases the member's data (RG-17) |
 | `favorite.user_account_id` | `user_account` | CASCADE | Same reason (RG-17) |
+| `password_reset_token.user_account_id` | `user_account` | CASCADE | Tokens are deleted with the account (RG-17) |
 | `comparison_product.comparison_id` | `comparison` | CASCADE | Links are deleted with the comparison |
 | `favorite.product_id` | `product` | RESTRICT | A product used by a member is archived, never deleted (RG-11) |
 | `comparison_product.product_id` | `product` | RESTRICT | Same reason (RG-11) |

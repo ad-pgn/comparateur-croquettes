@@ -454,6 +454,65 @@
 - Livrables : `docs/visual-identity.md` (en anglais, variables CSS incluses), guide de style Figma exporté
   (`docs/design/style-guide.png`).
 
+  ### Issue #10 — Wireframes (10/10/2026 au 25/10/2026)
+
+#### Contenu
+#### Contenu
+- 26 wireframes en niveaux de gris, avec de vrais libellés et des annotations numérotées :
+  - public, mobile et desktop (22 cadres) : E1 Accueil, E2 Résultats, E3 Fiche produit, E4 Comparateur, E5a Connexion,
+    E5b Inscription, E5c Mot de passe oublié, E5d Nouveau mot de passe, E6 Espace membre, E6b Confirmation de suppression,
+    E6c Mes informations ;
+  - public, mobile uniquement (1 cadre) : E2b Panneau des filtres ;
+  - back-office, desktop uniquement (3 cadres) : E7 Liste des produits, E8 Formulaire produit, E9 Import par code-barres.
+- Formats : mobile 393 px (remplace les 375 px indiqués à l'issue #9 ; tests à partir de 360 px pendant le développement) ;
+  desktop 1 440 px, grille de 12 colonnes, contenu limité à 1 200 px.
+- Annotations : toutes sur les écrans mobiles ; sur les écrans desktop, uniquement celles qui leur sont propres.
+- Livrables : `docs/design/wireframes/` (26 images), `docs/design/annotations-wireframes.md`.
+
+#### Décisions de conception
+- Nom du site conservé : « comparateur-croquettes » ; domaines `.fr` et `.com` non enregistrés d'après les registres (RDAP).
+- Pas de menu burger : en-tête à deux actions (« Comparer (n) » et compte), libellé du compte visible en desktop.
+- Bouton « Favori » visible pour les visiteurs ; un clic mène à la connexion puis ramène à la page.
+- Filtres : panneau dédié en mobile (E2b), avec bouton « Afficher n résultats » ; colonne permanente en desktop, avec
+  application immédiate de chaque filtre.
+- Comparateur : colonne des critères fixe et défilement horizontal en mobile ; quatre produits côte à côte et ligne des noms
+  fixe en desktop ; valeurs extrêmes en gras avec repères ▲ ▼ sans couleur, expliqués par une légende (RG-12).
+- Fiche produit en desktop : tableau des prix en pleine largeur ; constituants et composition côte à côte.
+- Noms des constituants identiques sur tous les écrans (« Protéines », « Matières grasses », « Cellulose », « Cendres »…).
+- Back-office : barre latérale à six sections ; gabarit commun à toutes les listes ; actions proposées selon l'état du produit.
+- « Publier » n'apparaît que si les conditions de la RG-10 sont remplies (E7 et E8) ; dans le formulaire, un encadré liste
+  les conditions de publication manquantes (US-21).
+- Deux niveaux d'exigence : l'astérisque signale les champs obligatoires pour enregistrer ; un brouillon peut être incomplet
+  (indispensable pour les produits importés, RG-19).
+
+#### Décision : sources des données produit limitées aux sites officiels des marques
+- Constat : pour un même produit, Zooplus affichait 1,6 % de cellulose et 7,6 % de cendres, contre 1,3 % et 7,5 % sur le site
+  officiel.
+- Conséquence : les sites des revendeurs servent uniquement aux relevés de prix.
+
+#### Évolutions du périmètre détectées pendant les wireframes
+- US-23 (modifier l'adresse e-mail), US-24 (modifier le mot de passe) et RG-21 : manque repéré en dessinant l'espace membre ;
+  ajoutées au MVP (milestone M7). Raisons : droit de rectification (RGPD) ; changement de mot de passe exigé par les bonnes
+  pratiques de sécurité (OWASP ASVS).
+- US-25 (réinitialiser le mot de passe par e-mail, anciennement US-C2) et RG-22 : passée au MVP (milestone M3). Raison : sans
+  elle, un membre ayant oublié son mot de passe perd l'accès à son compte.
+  - Lien à usage unique, valable 1 heure ; jeton stocké sous forme d'empreinte SHA-256 ; réponse identique que l'adresse
+    existe ou non ; fermeture de toutes les sessions après réinitialisation.
+  - Nouvelle entité PASSWORD_RESET_TOKEN : 18 entités et 26 tables.
+  - Deux routes d'API ; e-mails capturés par un serveur de test local en développement ; fournisseur d'envoi de production
+    choisi au déploiement.
+- Documents mis à jour : expression des besoins (v1.3), MCD, MLD, dictionnaire des données, contrat d'API, architecture ;
+  issues créées (US-23, US-24) et mise à jour (US-25).
+
+#### Erreurs initiales et corrections
+- Pagination incohérente avec le nombre de résultats : corrigée (E2 : 24 résultats, 2 pages ; E7 : 43 produits, 3 pages),
+  avec l'annotation « extrait : 20 produits par page ».
+- Cas « Prix non disponible » envisagé, puis écarté : impossible pour un produit publié, qui a au moins un relevé de prix (RG-10).
+- Exigences d'enregistrement et de publication d'abord confondues dans le formulaire produit : séparées.
+- Fichier de sauvegarde automatique de Looping (`mcd.lo1`) versionné par erreur : retiré du dépôt et ignoré (`*.lo[0-9]`).
+- Création d'issue en ligne de commande échouée : variable PowerShell vide après un texte multiligne mal terminé.
+  Solution : contenu de l'issue dans un fichier transmis avec `--body-file`.
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)

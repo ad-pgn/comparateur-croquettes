@@ -165,6 +165,8 @@ Each application has its own `package.json`; no monorepo tooling is used.
 - MySQL, MongoDB and an administration tool run in Docker containers.
 - Next.js and the Express API run directly on the host machine.
 - Configuration is provided through environment variables (`.env` files, never committed; `.env.example` files are committed).
+- Outgoing emails (password reset) are captured in development by a local test SMTP server running in a container,
+  which displays them in a web page: no real email is sent. The production email provider is chosen with the deployment.
 
 ## 9. Open points
 
@@ -173,3 +175,4 @@ Each application has its own `package.json`; no monorepo tooling is used.
 | Exact role of MongoDB and import flow | #7 |
 | REST API contract (endpoints, error format, pagination) | #8 |
 | Data model (MCD, MLD) | #5, #6 |
+| Production email provider | Deployment (M8) |
