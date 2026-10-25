@@ -27,3 +27,6 @@ Desktop.ini
 # Éditeur (seules les extensions recommandées sont partagées)
 .vscode/*
 !.vscode/extensions.json
+
+# Sauvegardes automatiques de Looping
+*.lo[0-9]

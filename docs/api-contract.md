@@ -144,8 +144,12 @@ Calculated values (price per kg, dry matter values, outdated price flag) are com
 | POST | `/api/auth/login` | Public | Log in (new session id) | 200, 400, 401, 429 | US-10 |
 | POST | `/api/auth/logout` | Member | Log out (session deleted) | 204 | US-10 |
 | GET | `/api/auth/me` | Public | Current user, or 401 if not logged in | 200, 401 | US-10 |
+| POST | `/api/auth/password-reset` | Public | Request a reset link; the response is the same whether the email address exists or not | 202, 400, 429 | US-25 |
+| POST | `/api/auth/password-reset/confirm` | Public | Set a new password with a valid token; all sessions are revoked | 204, 400, 429 | US-25 |
 
 Login errors always return the same generic message, whether the email address exists or not.
+A password reset request always returns 202, whether or not an account exists for the address. An expired, used or
+invalid token returns 400 with the code `INVALID_RESET_TOKEN`.
 
 ### Member area
 
@@ -159,6 +163,8 @@ Login errors always return the same generic message, whether the email address e
 | GET | `/api/me/comparisons/{id}` | Member | Saved comparison, archived products flagged as withdrawn | 200, 401, 404 | US-13 |
 | DELETE | `/api/me/comparisons/{id}` | Member | Delete a saved comparison | 204, 401, 404 | US-13 |
 | POST | `/api/me/deletion` | Member | Delete the account (password confirmation in the body) | 204, 400, 401 | US-14 |
+| PATCH | `/api/me/email` | Member | Change the email address (current password required) | 200, 400, 401, 409, 429 | US-23 |
+| PUT | `/api/me/password` | Member | Change the password (current password required); all other sessions are revoked and the current session id is regenerated | 204, 400, 401, 429 | US-24 |
 
 A member can only access their own data: a comparison of another member returns 404 (its existence is not revealed).
 Account deletion uses `POST` with a body rather than `DELETE`, because a body on a `DELETE` request has no defined meaning in HTTP.

@@ -26,6 +26,7 @@ Status: design phase — no feature implemented yet.
 - [Data import (EN)](docs/data-import.md)
 - [API contract (EN)](docs/api-contract.md)
 - [Visual identity (EN)](docs/visual-identity.md)
+- [Annotations des wireframes (FR)](docs/design/annotations-wireframes.md)
 
 ## Stack technique
 
