@@ -1,6 +1,6 @@
 # Expression des besoins — comparateur-croquettes
 
-> Version 1.3 — 22 octobre 2026 (US-C2 intégrée au MVP sous US-25, ajout de la RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
+> Version 1.4 — 6 novembre 2026 (redirections après inscription et connexion, ajout aux favoris après connexion). Version 1.3 du 22 octobre 2026 (US-25, RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
 > Les éléments marqués **(à valider)** restent à arrêter en conception.
 > Les éléments marqués **(hypothèse)** ne sont pas démontrés et ne doivent pas être présentés comme des faits.
 
@@ -313,17 +313,21 @@ En tant que visiteur, je veux créer un compte afin de sauvegarder mes favoris e
 - Les erreurs sont affichées à côté des champs concernés, sans effacer la saisie valide.
 - Le mot de passe n'est jamais stocké en clair.
 - L'inscription nécessite d'avoir pris connaissance de la politique de confidentialité.
+- Une fois le compte créé, le membre est connecté automatiquement et arrive sur son espace membre.
 
 **US-10 — Se connecter et se déconnecter** (MVP)
 En tant que membre, je veux me connecter et me déconnecter afin d'accéder à mon espace de façon sécurisée.
 - En cas d'identifiants incorrects, le message reste générique : il ne révèle pas si l'e-mail existe.
 - Les tentatives répétées sont limitées.
 - Après déconnexion, les pages de l'espace membre ne sont plus accessibles.
+- Après la connexion, le membre revient sur la page qu'il consultait ; à défaut, il arrive sur son espace membre.
+- Seuls les chemins internes au site sont acceptés comme page de retour (protection contre les redirections ouvertes).
 
 **US-11 — Gérer mes favoris** (MVP)
 En tant que membre, je veux ajouter et retirer des produits de mes favoris afin de les retrouver facilement.
 - Un produit ne peut être ajouté qu'une fois (RG-16).
 - La liste des favoris est accessible depuis l'espace membre.
+- Un visiteur qui clique sur « Favori » est dirigé vers la connexion ; une fois connecté, il revient sur la page et le produit est ajouté à ses favoris.
 
 **US-12 — Sauvegarder une comparaison** (MVP)
 En tant que membre, je veux sauvegarder une comparaison sous un nom afin de la retrouver plus tard.

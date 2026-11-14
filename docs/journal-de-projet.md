@@ -513,6 +513,62 @@
 - Création d'issue en ligne de commande échouée : variable PowerShell vide après un texte multiligne mal terminé.
   Solution : contenu de l'issue dans un fichier transmis avec `--body-file`.
 
+  ### Issue #11 — Maquettes et schéma d'enchaînement (25/10/2026 au 14/11/2026)
+
+#### Contenu
+- Bibliothèque de composants Figma : 9 composants de base (Button, TextField, Select, Checkbox, Tag, Chip, Alert,
+  FilterSection, NavItem) et 10 composants composés (ProductCard, Header, Footer, Pagination, SegmentedControl, Dialog,
+  TableCell, CompareBar, AdminSidebar, Brand). Noms et propriétés en anglais, identiques aux futurs composants React.
+- 14 maquettes : E1 à E4 en mobile et desktop ; E2b, E5a, E5b et E6 en mobile ; E7 et E8 en desktop.
+  Les autres écrans réutilisent les mêmes composants : leurs wireframes suffisent.
+- Schéma d'enchaînement des écrans en Mermaid (`docs/design/navigation-flow.md` et `.png`).
+- Livrables : `docs/design/mockups/` (14 images), `components-base.png`, `components-composed.png`, `style-guide.png` mis à jour,
+  `docs/design/logo/`, `docs/visual-identity.md` complété.
+- Prototype cliquable Figma non réalisé : non exigé par le référentiel (maquettes et schéma d'enchaînement demandés) ;
+  l'application réelle sera présentée en fonctionnement.
+
+#### Décision : logo
+- Badge illustré (portrait de Staffordshire bleu), généré par un service d'IA (OpenAI, d'après les métadonnées C2PA),
+  puis vectorisé (VTracer) et optimisé (Scour) : 224 Ko.
+- En-tête : badge seul en mobile (44 px), badge et nom du site en desktop. Favicon : recadrage du portrait du badge
+  (16, 32, 48, 180, 192 et 512 px).
+- Icône simplifiée dessinée en SVG puis abandonnée : le badge reste reconnaissable à 44 px.
+
+#### Décisions de conception
+- Icônes Lucide (licence ISC), identiques dans Figma et en React.
+- Libellé « Connexion » / « Mon compte » visible en mobile, après calcul de la largeur de l'en-tête à 360 px
+  (311 px utilisés sur 328 disponibles). Wireframes mobiles mis à jour en conséquence.
+- Titre principal (h1) en 36 px sur tous les écrans, après test d'un nom de produit long (3 lignes à 393 px).
+- Espaces entre sections : 32 px en mobile, 48 px en desktop ; titre, introduction et recherche rapprochés (proximité).
+- Écrans de référence : 393 × 852 px (iPhone 16) et 1 440 × 1 024 px. Formulaires du back-office limités à 1 000 px.
+- Comparateur : gras réservé aux valeurs extrêmes, toujours suivies de ▲ ou ▼ (RG-12).
+- Tag (information, sans bordure) distinct de Chip (action, bordure et 44 px de haut).
+- Anneau de focus unique, toujours vert, quel que soit l'élément.
+- Barre de comparaison fixée en bas : marge de même hauteur ajoutée en bas de page pour ne jamais masquer la pagination
+  ni le pied de page.
+- Back-office : barre latérale à 8 liens ; « Publier » absent tant que la RG-10 n'est pas respectée, encadré
+  « Conditions de publication manquantes » pour la US-21.
+- Données d'exemple : produit réel (Royal Canin Maxi Adult) uniquement sur la fiche produit, avec sa source ; ailleurs,
+  noms et marques clairement fictifs.
+
+#### Évolution des besoins (expression des besoins v1.4)
+- Connexion automatique après l'inscription (US-09).
+- Retour sur la page d'origine après la connexion (US-10), avec protection contre les redirections ouvertes : seuls les
+  chemins internes au site sont acceptés.
+- Ajout aux favoris conservé après la connexion d'un visiteur (US-11).
+- Issues #21, #22 et #23 mises à jour.
+
+#### Difficultés et corrections
+- Premier fichier « SVG » du logo : une image PNG de 4,1 Mo encapsulée, sans tracé vectoriel. Vraie vectorisation réalisée.
+- Figma impose une seule position et une seule épaisseur pour toutes les bordures d'un calque : anneau de focus réalisé
+  avec deux ombres sans flou, séparateur vertical des tableaux avec une ombre interne.
+- Couleur de trait différente sous la colonne des critères des tableaux : détectée par analyse des pixels d'un export,
+  corrigée.
+- Renommage des exports refusé par PowerShell (`Rename-Item` n'écrase pas un fichier existant) : anciens fichiers
+  supprimés après vérification avec `-WhatIf`.
+- Mesures estimées à partir de captures réduites parfois erronées : vérification systématique sur les valeurs Figma
+  ou sur des exports en taille réelle.
+
 ## 4. Mise en place du projet
 
 ### Étape 4.1 — Création du dépôt (24/09/2026)

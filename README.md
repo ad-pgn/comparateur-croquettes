@@ -27,6 +27,8 @@ Status: design phase — no feature implemented yet.
 - [API contract (EN)](docs/api-contract.md)
 - [Visual identity (EN)](docs/visual-identity.md)
 - [Annotations des wireframes (FR)](docs/design/annotations-wireframes.md)
+- [Schéma d'enchaînement des écrans (FR)](docs/design/navigation-flow.md)
+- Maquettes : [`docs/design/mockups/`](docs/design/mockups/)
 
 ## Stack technique
 
