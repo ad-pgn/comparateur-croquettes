@@ -8,7 +8,7 @@
 ## Éléments communs (tous les écrans publics)
 
 1. **Logo** : lien vers l'accueil ; texte alternatif « comparateur-croquettes — accueil ».
-2. **Icône de compte** : nom accessible « Connexion » (visiteur) ou « Mon compte » (membre) ; zone cliquable de 44 px minimum ; libellé visible en desktop.
+2. **Icône de compte** : libellé visible « Connexion » (visiteur) ou « Mon compte » (membre), en mobile comme en desktop ; zone cliquable de 44 px de haut minimum.
 3. **« Comparer (n) »** : nombre de produits sélectionnés ; sans sélection, mène à une page expliquant comment ajouter des produits.
 4. **Pied de page** : l'avertissement vétérinaire est présent sur toutes les pages (RG-20).
 5. **Fil d'Ariane** : zone de navigation nommée « Fil d'Ariane » ; la page actuelle est signalée comme page courante et n'est pas un lien.
