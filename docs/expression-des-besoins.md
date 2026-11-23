@@ -1,6 +1,6 @@
 # Expression des besoins — comparateur-croquettes
 
-> Version 1.4 — 6 novembre 2026 (redirections après inscription et connexion, ajout aux favoris après connexion). Version 1.3 du 22 octobre 2026 (US-25, RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
+> Version 1.5 — 23 novembre 2026 (RG-03 : conditions du prix relevé). Version 1.4 du 14 novembre 2026 (redirections après inscription et connexion, ajout aux favoris après connexion). Version 1.3 du 22 octobre 2026 (US-25, RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
 > Les éléments marqués **(à valider)** restent à arrêter en conception.
 > Les éléments marqués **(hypothèse)** ne sont pas démontrés et ne doivent pas être présentés comme des faits.
 
@@ -182,7 +182,7 @@ Un administrateur n'est jamais créé par l'inscription publique (voir RG-15).
 |---|---|---|
 | RG-01 | Éligibilité « commercialisé en France » | Le produit est étiqueté en français et vendu dans au moins un point de vente physique en France, ou sur un site marchand exploité par une entité établie en France (y compris le site français de la marque). |
 | RG-02 | Exclusions | Sont exclus : les aliments diététiques et gammes distribuées exclusivement par les vétérinaires, et les marques propres de la grande distribution. |
-| RG-03 | Relevé de prix | Un relevé comprend : format (poids net), prix TTC en euros, type (PPC marque / vente directe marque / prix revendeur), source (enseigne ou site), URL et date du relevé. |
+| RG-03 | Relevé de prix | Un relevé comprend : format (poids net), prix TTC en euros, type (PPC marque / vente directe marque / prix revendeur), source (enseigne ou site), URL et date du relevé. Le prix relevé est le prix public standard en achat unique : sans abonnement, code promo, remise de fidélité ni frais de port. Les lots et les sacs promotionnels ne sont pas relevés. |
 | RG-04 | Sources de prix autorisées | Sites des marques, Zooplus, Maxi Zoo, Truffaut, Animalis. Zooplus n'est une source valable que si le produit est aussi vendu dans un autre circuit éligible. |
 | RG-05 | Prix au kilo | Prix au kilo = prix TTC ÷ poids net du format en kg, arrondi au centime. Il est calculé par l'application et n'est jamais saisi. |
 | RG-06 | Ancienneté d'un prix | Un relevé de plus de 90 jours est signalé comme « à actualiser ». |

@@ -84,6 +84,14 @@
 - Alternative écartée : sources de la grande distribution (reportées en évolution future).
 - Conséquences : relevés manuels ; une marque sans relevé de prix possible dans les sources retenues est écartée de la sélection.
 
+### Décision : conditions du prix relevé (23/11/2026)
+- Règle : prix public standard, en achat unique, sans abonnement, code promo, remise de fidélité ni frais de port ;
+  lots et sacs promotionnels non relevés (RG-03).
+- Raisons : les marques (vente directe) comme les revendeurs proposent des remises conditionnelles ;
+  comparer un prix avec abonnement à un prix normal fausserait la comparaison.
+- Conséquence : un produit peut avoir plusieurs relevés (vente directe marque et revendeurs) ;
+  le comparateur affiche le prix au kilo le plus bas, avec sa source et sa date.
+
 ### Décision : volume cible de 30 à 45 produits
 - Principe de sélection : couvrir des segments communs à plusieurs marques (stade de vie, gabarit, stérilisé/light, digestion sensible),
   puis popularité (indicateur : classements « meilleures ventes » des revendeurs, datés), puis disponibilité des données.
