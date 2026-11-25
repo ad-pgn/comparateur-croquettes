@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.8 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.9 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -64,7 +64,7 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 4 | Purina (ONE) | ✓ | ✗ aucune source éligible pour les croquettes chien du site officiel | ✓ site officiel | Écartée (étape 2) |
 | 5 | Advance | ✓ | ✗ aucune source éligible (Maxi Zoo : Veterinary Diets uniquement ; Truffaut : vendeur partenaire ; absente d'Animalis) | — | Écartée (étape 2) |
 | 6 | Real Nature (Wilderness) | ✓ marque propre de Maxi Zoo | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
-| 7 | Josera | ? | ? | ? | |
+| 7 | Josera (gamme principale) | ✓ | ✓ vente directe josera.fr, Zooplus | ✓ (énergie déclarée, humidité non déclarée) | Retenue |
 | 8 | Acana | ? | ? | ? | |
 | 9 | Eukanuba | ? | ? | ? | |
 | 10 | Select Gold (Maxi Zoo) | ? | ? | ? | |
@@ -88,7 +88,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Hill's (Science Plan) | Small & Mini Adult poulet | Adult Medium poulet | Adult Large Breed agneau + riz | Puppy Medium poulet | Senior Vitality Mature 7+ Small & Mini poulet + riz | Perfect Weight Adult Large Breed poulet | Perfect Digestion Adult Medium poulet + riz complet | — | 7 |
 | Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet (candidat : Medium-Maxi Light in Fat avec du Poulet) | — | Petit Junior avec du Poulet (chiot petit gabarit) | 4 (+2 candidats) |
 | Real Nature (Wilderness) | Mini Adult Green Coast (canard, saumon, crevettes) | Adult True Country (poulet, poisson) | Adult grande taille Wide Savannah (sanglier, agneau, canard) | Maxi Junior Pur Canard | Senior True Country (poulet, poisson) | — | — | — | 5 |
-| **Marques par segment** | 5 | 5 | 5 | 4 | 5 | 4 | 3 | | |
+| Josera (gamme principale) | Mini Chicken & Rice | Medi/Maxi Chicken & Rice | Medi/Maxi Chicken & Rice (même produit qu'en S2 : moyennes et grandes races) | Kids | Balance (senior) | — | SensiPlus | — | 5 |
+| **Marques par segment** | 6 | 6 | 6 | 5 | 6 | 4 | 4 | | |
 
 ## 6. Journal des vérifications
 
@@ -191,6 +192,19 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | Maxi Junior Pur Canard (S4) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-maxi-junior-pur-canard-4-kg-1297082/ | ✓ Chiot de grande race (poids adulte > 25 kg) ; 4 et 12 kg ; monoprotéine (canard) |
 | 25/11/2026 | Senior True Country (S5) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-senior-true-country-poulet-au-poisson-4-kg-1083997007/ | ✓ Senior toutes tailles, dès 6 à 8 ans ; 1, 4 et 12 kg |
 | 25/11/2026 | Real Nature (S6, S7) | Couverture | Maxi Zoo | ✗ Aucune croquette light, stérilisé ou digestion sensible (contrôle d'Adrian) |
+| 25/11/2026 | Josera | Éligibilité et vente directe | https://www.josera.fr/nourriture-chien.html | ✓ Boutique officielle française (vente directe) ; Zooplus valable en seconde source ; absente de Truffaut et de Maxi Zoo d'après les recherches ; gammes JosiDog et Josera Help non retenues |
+| 25/11/2026 | Mini Chicken & Rice (S1) | Données et prix | https://www.josera.fr/josera-miniwell.html | ✓ Adulte petite taille ; 900 g, 3 et 10 kg ; constituants et énergie (3 872 kcal/kg) ; humidité non déclarée |
+| 25/11/2026 | Mini Chicken & Rice (S1) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_adulte/2406319 | ✓ « Josera Mini Adult poulet et riz », sacs de 900 g et 10 kg |
+| 25/11/2026 | Medi/Maxi Chicken & Rice (S2, S3) | Données et prix | https://www.josera.fr/josera-large-breed.html | ✓ Adulte moyenne et grande race ; 3 et 12,5 kg ; constituants et énergie (3 663 kcal/kg) |
+| 25/11/2026 | Medi/Maxi Chicken & Rice (S2, S3) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_adulte/2414646 | ✓ Sacs de 3 et 12,5 kg (lot 2 × 12,5 kg non relevé) |
+| 25/11/2026 | Kids (S4) | Données et prix | https://www.josera.fr/josera-kids.html | ✓ Chiot moyenne et grande race, dès 6 semaines ; 900 g, 3 et 12,5 kg ; énergie (3 675 kcal/kg) |
+| 25/11/2026 | Kids (S4) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_junior_chiot/2413774 | ✓ Sacs de 900 g, 3 et 12,5 kg ; constituants identiques |
+| 25/11/2026 | Balance (S5) | Données et prix | https://www.josera.fr/josera-balance.html | ✓ Senior toutes races, besoins énergétiques réduits ; 900 g, 3 et 12,5 kg ; énergie (3 477 kcal/kg). Préféré à Senior Salmon & Rice, absent de Zooplus |
+| 25/11/2026 | Balance (S5) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_age_senior/2397023 | ✓ Sacs de 900 g, 3 et 12,5 kg ; constituants identiques |
+| 25/11/2026 | SensiPlus (S7) | Données et prix | https://www.josera.fr/josera-sensiplus.html | ✓ Adulte à digestion sensible, toutes tailles ; 900 g, 3 et 12,5 kg ; énergie (3 678 kcal/kg) ; sans gluten (contient du maïs) |
+| 25/11/2026 | SensiPlus (S7) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_adulte/2397069 | ✓ Sacs de 900 g et 12,5 kg |
+| 25/11/2026 | Light & Vital (S6) | Éligibilité | https://www.josera.fr/josera-light-vital.html | ✗ Présenté comme « aliment diététique complet pour réduire le surpoids » : exclu par RG-02 |
+| 25/11/2026 | Josera | Prix | josera.fr | Prix « PVC » barrés d'environ 10 % sur plusieurs fiches, bandeau « Black Week » sur le site : prix PVC à relever |
 
 ## 7. Décisions
 
@@ -227,6 +241,9 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
   la gamme est surtout distribuée en grande distribution et sur Zooplus. Absence chez Animalis confirmée par Adrian.
 - **Advance écartée (25/11/2026)** : aucune croquette chien hors gamme vétérinaire n'est vendue par Truffaut, Maxi Zoo ou Animalis
   (étape 2) ; la seule offre Truffaut provient d'un vendeur partenaire.
+- **Aliments diététiques (25/11/2026)** : RG-02 est appliquée à la lettre : un produit présenté par la marque comme « aliment
+  diététique » est exclu, même vendu hors réseau vétérinaire (cas de Josera Light & Vital).
+- **Josera, promotion « Black Week » (25/11/2026)** : dans le doute, on relève le prix PVC barré.
 - **Ajout de marques (25/11/2026)** : si, une fois la liste des candidates épuisée, un segment ou la section 3 bis n'est pas couvert,
   on ajoute d'autres marques candidates, en appliquant la même méthode.
 - **Même produit chez deux revendeurs (25/11/2026)** : une seconde source de prix n'est retenue que si le produit est le même :
