@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.6 — 25 novembre 2026 (Purina Pro Plan, Hill's et Ultima, marque et gamme, prix barré, prix conseillé, même produit). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.8 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -61,9 +61,9 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 1 | Purina (Pro Plan) | ✓ | ✓ Truffaut, Maxi Zoo (Animalis à confirmer) ; pas de vente directe | ✓ (humidité non déclarée, énergie déclarée) | Retenue |
 | 2 | Hill's (Science Plan) | ✓ | ✓ Truffaut, Zooplus (si vendu aussi chez Truffaut) ; pas de vente directe ; Maxi Zoo non trouvé | ✓ (humidité déclarée, énergie déclarée) | Retenue |
 | 3 | Ultima | ✓ | ✓ Maxi Zoo, Zooplus (si même produit) ; pas de vente directe | ✓ constituants affichés (contrôle visuel), humidité et énergie non déclarées | Retenue |
-| 4 | Purina (ONE) | ✓ | ✗ aucune source éligible pour les croquettes chien du site officiel (Animalis à vérifier) | ✓ site officiel | Écartée (étape 2), sous réserve d'Animalis |
-| 5 | Advance | ? | ? | ? | |
-| 6 | Real Nature (Maxi Zoo) | ? | ? | ? | |
+| 4 | Purina (ONE) | ✓ | ✗ aucune source éligible pour les croquettes chien du site officiel | ✓ site officiel | Écartée (étape 2) |
+| 5 | Advance | ✓ | ✗ aucune source éligible (Maxi Zoo : Veterinary Diets uniquement ; Truffaut : vendeur partenaire ; absente d'Animalis) | — | Écartée (étape 2) |
+| 6 | Real Nature (Wilderness) | ✓ marque propre de Maxi Zoo | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
 | 7 | Josera | ? | ? | ? | |
 | 8 | Acana | ? | ? | ? | |
 | 9 | Eukanuba | ? | ? | ? | |
@@ -87,7 +87,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Purina (Pro Plan) | Small & Mini Adult Everyday Nutrition | Medium Adult Everyday Nutrition | Large Athletic Adult Everyday Nutrition | Medium Puppy Healthy Start (candidat : Large Athletic Puppy Sensitive Digestion) | Medium & Large Adult 7+ Age Defence | All Sizes Adult Light / Sterilised poisson blanc | Medium & Large Adult Sensitive Digestion Grain Free dinde | Small & Mini Puppy Healthy Start (chiot petit gabarit) | 7 (+2 candidats) |
 | Hill's (Science Plan) | Small & Mini Adult poulet | Adult Medium poulet | Adult Large Breed agneau + riz | Puppy Medium poulet | Senior Vitality Mature 7+ Small & Mini poulet + riz | Perfect Weight Adult Large Breed poulet | Perfect Digestion Adult Medium poulet + riz complet | — | 7 |
 | Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet (candidat : Medium-Maxi Light in Fat avec du Poulet) | — | Petit Junior avec du Poulet (chiot petit gabarit) | 4 (+2 candidats) |
-| **Marques par segment** | 4 | 4 | 4 | 3 | 4 | 4 | 3 | | |
+| Real Nature (Wilderness) | Mini Adult Green Coast (canard, saumon, crevettes) | Adult True Country (poulet, poisson) | Adult grande taille Wide Savannah (sanglier, agneau, canard) | Maxi Junior Pur Canard | Senior True Country (poulet, poisson) | — | — | — | 5 |
+| **Marques par segment** | 5 | 5 | 5 | 4 | 5 | 4 | 3 | | |
 
 ## 6. Journal des vérifications
 
@@ -179,6 +180,17 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | Purina (ONE) | Prix | https://www.maxizoo.fr/c/marques/purina-one/ | ✗ Une seule croquette chien : Mini Adult Saumon 3 × 800 g, recette absente du site officiel français |
 | 25/11/2026 | Purina (ONE) | Prix | Truffaut | ✗ Purina ONE vendu pour chats uniquement d'après les recherches |
 | 25/11/2026 | Purina (ONE) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/purina_one_croquettes_chien | ✗ Gamme disponible, mais Zooplus ne compte pas sans autre circuit éligible (RG-04) |
+| 25/11/2026 | Advance | Prix | https://www.maxizoo.fr/c/marques/affinity/ | ✗ Seule la gamme Veterinary Diets (exclue par RG-02) est vendue en croquettes chien ; le reste est des friandises |
+| 25/11/2026 | Advance | Prix | https://www.truffaut.com/croquettes-chien-adult-medium-advance-1.html | ✗ Adult Medium 14 kg vendu par Nutricroc (vendeur partenaire, contrôle d'Adrian), indisponible |
+| 25/11/2026 | Advance | Prix | Animalis | ✗ Absente (contrôle d'Adrian) |
+| 25/11/2026 | Advance | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/affinity_advance | ✗ Gamme disponible, mais Zooplus ne compte pas sans autre circuit éligible (RG-04) |
+| 25/11/2026 | Real Nature (Wilderness) | Éligibilité et données | https://www.maxizoo.fr/c/marques/real-nature-wilderness/ | ✓ Marque propre de Maxi Zoo (RG-02 n'exclut que les marques propres de la grande distribution) ; la fiche Maxi Zoo tient lieu de site officiel ; gamme sans céréales |
+| 25/11/2026 | Mini Adult Green Coast (S1) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-mini-adult-green-coast-canard-au-saumon-et-aux-crevettes-1-kg-1083996008/ | ✓ Petite race (1 à 10 kg), dès 11 mois ; 1 kg ; constituants publiés (« fibres brutes » = cellulose brute) ; humidité et énergie non déclarées |
+| 25/11/2026 | Adult True Country (S2) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-croquettes-chien-adulte-true-country-poulet-avec-poisson-12-kg-1083998001/ | ✓ Adulte toutes tailles (5 à 80 kg) ; 12 kg en promotion (prix barré 78,99 € à relever) ; lot 2 × 12 kg non relevé ; « matière inorganique » = cendres brutes |
+| 25/11/2026 | Adult grande taille Wide Savannah (S3) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-croquettes-pour-chien-adulte-de-grande-taille-wide-savannah-sanglier-avec-agneau-et-canard-12-kg-1083998010/ | ✓ Adulte de 25 kg et plus ; 12 kg ; lot 2 × 12 kg non relevé |
+| 25/11/2026 | Maxi Junior Pur Canard (S4) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-maxi-junior-pur-canard-4-kg-1297082/ | ✓ Chiot de grande race (poids adulte > 25 kg) ; 4 et 12 kg ; monoprotéine (canard) |
+| 25/11/2026 | Senior True Country (S5) | Données et prix | https://www.maxizoo.fr/p/real-nature-wilderness-senior-true-country-poulet-au-poisson-4-kg-1083997007/ | ✓ Senior toutes tailles, dès 6 à 8 ans ; 1, 4 et 12 kg |
+| 25/11/2026 | Real Nature (S6, S7) | Couverture | Maxi Zoo | ✗ Aucune croquette light, stérilisé ou digestion sensible (contrôle d'Adrian) |
 
 ## 7. Décisions
 
@@ -212,7 +224,11 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
   puis réintégrée après contrôle visuel : les constituants sont affichés par un script. Conséquence : une absence de donnée constatée
   automatiquement est toujours confirmée visuellement avant d'écarter un produit.
 - **Purina ONE écartée (25/11/2026)** : aucune croquette chien du site officiel n'est vendue par Truffaut ou Maxi Zoo (étape 2) ;
-  la gamme est surtout distribuée en grande distribution et sur Zooplus. Décision à revoir si Animalis la vend.
+  la gamme est surtout distribuée en grande distribution et sur Zooplus. Absence chez Animalis confirmée par Adrian.
+- **Advance écartée (25/11/2026)** : aucune croquette chien hors gamme vétérinaire n'est vendue par Truffaut, Maxi Zoo ou Animalis
+  (étape 2) ; la seule offre Truffaut provient d'un vendeur partenaire.
+- **Ajout de marques (25/11/2026)** : si, une fois la liste des candidates épuisée, un segment ou la section 3 bis n'est pas couvert,
+  on ajoute d'autres marques candidates, en appliquant la même méthode.
 - **Même produit chez deux revendeurs (25/11/2026)** : une seconde source de prix n'est retenue que si le produit est le même :
   même nom, format présent dans la liste officielle, constituants identiques. Une marque peut vendre sous le même nom des recettes
   différentes selon les pays ou les circuits.
