@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.9 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.10 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -65,7 +65,7 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 5 | Advance | ✓ | ✗ aucune source éligible (Maxi Zoo : Veterinary Diets uniquement ; Truffaut : vendeur partenaire ; absente d'Animalis) | — | Écartée (étape 2) |
 | 6 | Real Nature (Wilderness) | ✓ marque propre de Maxi Zoo | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
 | 7 | Josera (gamme principale) | ✓ | ✓ vente directe josera.fr, Zooplus | ✓ (énergie déclarée, humidité non déclarée) | Retenue |
-| 8 | Acana | ? | ? | ? | |
+| 8 | Acana | ✓ | ✓ Animalis (source unique : offres Zooplus de vendeurs partenaires, fiche Truffaut indisponible) | ✓ (humidité 12 % et énergie déclarées) | Retenue |
 | 9 | Eukanuba | ? | ? | ? | |
 | 10 | Select Gold (Maxi Zoo) | ? | ? | ? | |
 | 11 | Edgard & Cooper | ? | ? | ? | |
@@ -89,7 +89,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet (candidat : Medium-Maxi Light in Fat avec du Poulet) | — | Petit Junior avec du Poulet (chiot petit gabarit) | 4 (+2 candidats) |
 | Real Nature (Wilderness) | Mini Adult Green Coast (canard, saumon, crevettes) | Adult True Country (poulet, poisson) | Adult grande taille Wide Savannah (sanglier, agneau, canard) | Maxi Junior Pur Canard | Senior True Country (poulet, poisson) | — | — | — | 5 |
 | Josera (gamme principale) | Mini Chicken & Rice | Medi/Maxi Chicken & Rice | Medi/Maxi Chicken & Rice (même produit qu'en S2 : moyennes et grandes races) | Kids | Balance (senior) | — | SensiPlus | — | 5 |
-| **Marques par segment** | 6 | 6 | 6 | 5 | 6 | 4 | 4 | | |
+| Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 6 (+1 candidat) |
+| **Marques par segment** | 7 | 7 | 7 | 6 | 7 | 5 | 4 | | |
 
 ## 6. Journal des vérifications
 
@@ -205,6 +206,18 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | SensiPlus (S7) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/josera_croquettes_chien/chien_adulte/2397069 | ✓ Sacs de 900 g et 12,5 kg |
 | 25/11/2026 | Light & Vital (S6) | Éligibilité | https://www.josera.fr/josera-light-vital.html | ✗ Présenté comme « aliment diététique complet pour réduire le surpoids » : exclu par RG-02 |
 | 25/11/2026 | Josera | Prix | josera.fr | Prix « PVC » barrés d'environ 10 % sur plusieurs fiches, bandeau « Black Week » sur le site : prix PVC à relever |
+| 25/11/2026 | Acana | Éligibilité et prix | https://www.animalis.com/marques/acana/ | ✓ 19 croquettes chien vendues par Animalis (contrôle d'Adrian puis vérification) ; pas de vente directe |
+| 25/11/2026 | Acana | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/acana/9980002796 | ✗ Toutes les offres Zooplus proviennent de vendeurs partenaires |
+| 25/11/2026 | Acana | Prix | https://www.truffaut.com/acana-pacifica-sans-cereales-croquettes-pour-chien-11-4kg.html | ✗ Seule fiche Truffaut, indisponible en ligne et en magasin |
+| 25/11/2026 | Acana | Données officielles | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-adult.html | ✓ Composition, additifs, constituants (humidité 12 %) et énergie (3 510 kcal/kg) affichés : contrôle visuel d'Adrian sur 4 à 5 fiches (composition et énergie chargées par un script) |
+| 25/11/2026 | Adult Small Breed Recipe (S1) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-adult-small.html | ✓ Petites races ; 2 et 6 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-heritage-adult-small-breed-pour-chien-PM600001_M.html |
+| 25/11/2026 | Adult Dog Recipe (S2) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-adult.html | ✓ Toutes races ; 2, 6, 11,4 et 17 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-adult-dog-recipe-au-poulet-pour-chiens-PM221907_M.html |
+| 25/11/2026 | Adult Large Breed Recipe (S3) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-adult-large.html | ✓ Grandes races ; 11,4 et 17 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-adult-large-breed-au-poulet-pour-chien-PM600000_M.html |
+| 25/11/2026 | Puppy Large Breed Recipe (S4) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-puppy-large.html | ✓ Chiot grande race ; 11,4 et 17 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-heritage-puppy-large-breed-pour-chiot-PM600010_M.html |
+| 25/11/2026 | Senior Recipe (S5) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-senior.html | ✓ Senior toutes races ; 2, 6 et 11,4 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-heritage-senior-pour-chien-PM221906_M.html |
+| 25/11/2026 | Light & Fit Recipe (S6) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-light-fit.html | ✓ Adulte toutes races, maintien d'un poids sain ; non présenté comme aliment diététique ; 2, 6 et 11,4 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-heritage-light-fit-pour-chien-PM600006_M.html |
+| 25/11/2026 | Puppy Small Breed Recipe (hors segment) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-puppy-small.html | ✓ Chiot petit gabarit ; Animalis : https://www.animalis.com/acana-croquettes-heritage-puppy-small-breed-pour-chiot-PM221902_M.html |
+| 25/11/2026 | Acana (S7) | Couverture | Site officiel, Animalis | ✗ Aucune croquette digestion sensible |
 
 ## 7. Décisions
 
@@ -244,6 +257,8 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 - **Aliments diététiques (25/11/2026)** : RG-02 est appliquée à la lettre : un produit présenté par la marque comme « aliment
   diététique » est exclu, même vendu hors réseau vétérinaire (cas de Josera Light & Vital).
 - **Josera, promotion « Black Week » (25/11/2026)** : dans le doute, on relève le prix PVC barré.
+- **Animalis (25/11/2026)** : le site animalis.com est mal indexé par l'outil de recherche ; la présence d'une marque chez Animalis
+  est vérifiée à la main avant d'écarter la marque (cas d'Acana, d'abord jugée sans source de prix).
 - **Ajout de marques (25/11/2026)** : si, une fois la liste des candidates épuisée, un segment ou la section 3 bis n'est pas couvert,
   on ajoute d'autres marques candidates, en appliquant la même méthode.
 - **Même produit chez deux revendeurs (25/11/2026)** : une seconde source de prix n'est retenue que si le produit est le même :
