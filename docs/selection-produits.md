@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.5 — 25 novembre 2026 (Purina Pro Plan et Hill's vérifiées, marque et gamme, prix barré, prix conseillé). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.6 — 25 novembre 2026 (Purina Pro Plan, Hill's et Ultima, marque et gamme, prix barré, prix conseillé, même produit). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -60,8 +60,8 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | — | Royal Canin (Size Health Nutrition) | ✓ | ✓ vente directe marque, Truffaut, Maxi Zoo | ✓ (humidité non déclarée) | Retenue |
 | 1 | Purina (Pro Plan) | ✓ | ✓ Truffaut, Maxi Zoo (Animalis à confirmer) ; pas de vente directe | ✓ (humidité non déclarée, énergie déclarée) | Retenue |
 | 2 | Hill's (Science Plan) | ✓ | ✓ Truffaut, Zooplus (si vendu aussi chez Truffaut) ; pas de vente directe ; Maxi Zoo non trouvé | ✓ (humidité déclarée, énergie déclarée) | Retenue |
-| 3 | Ultima | ? | ? | ? | |
-| 4 | Purina (ONE) | ? | ? | ? | |
+| 3 | Ultima | ✓ | ✓ Maxi Zoo, Zooplus (si même produit) ; pas de vente directe | ✓ constituants affichés (contrôle visuel), humidité et énergie non déclarées | Retenue |
+| 4 | Purina (ONE) | ✓ | ✗ aucune source éligible pour les croquettes chien du site officiel (Animalis à vérifier) | ✓ site officiel | Écartée (étape 2), sous réserve d'Animalis |
 | 5 | Advance | ? | ? | ? | |
 | 6 | Real Nature (Maxi Zoo) | ? | ? | ? | |
 | 7 | Josera | ? | ? | ? | |
@@ -86,7 +86,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Royal Canin (Size Health Nutrition) | Mini Adult | Medium Adult | Maxi Adult | Medium Puppy (candidat : Maxi Puppy) | Medium Ageing 10+ | X-Small Sterilised | Maxi Digestive Care | — | 7 (+1 candidat) |
 | Purina (Pro Plan) | Small & Mini Adult Everyday Nutrition | Medium Adult Everyday Nutrition | Large Athletic Adult Everyday Nutrition | Medium Puppy Healthy Start (candidat : Large Athletic Puppy Sensitive Digestion) | Medium & Large Adult 7+ Age Defence | All Sizes Adult Light / Sterilised poisson blanc | Medium & Large Adult Sensitive Digestion Grain Free dinde | Small & Mini Puppy Healthy Start (chiot petit gabarit) | 7 (+2 candidats) |
 | Hill's (Science Plan) | Small & Mini Adult poulet | Adult Medium poulet | Adult Large Breed agneau + riz | Puppy Medium poulet | Senior Vitality Mature 7+ Small & Mini poulet + riz | Perfect Weight Adult Large Breed poulet | Perfect Digestion Adult Medium poulet + riz complet | — | 7 |
-| **Marques par segment** | 3 | 3 | 3 | 3 | 3 | 3 | 3 | | |
+| Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet (candidat : Medium-Maxi Light in Fat avec du Poulet) | — | Petit Junior avec du Poulet (chiot petit gabarit) | 4 (+2 candidats) |
+| **Marques par segment** | 4 | 4 | 4 | 3 | 4 | 4 | 3 | | |
 
 ## 6. Journal des vérifications
 
@@ -155,6 +156,29 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | Puppy Medium poulet (S4, remplace la version agneau) | Données officielles | https://www.hillspet.fr/dog-food/science-plan-puppy-medium-chicken-dry | ✓ Composition, constituants obligatoires, humidité (8 %), énergie (3 749 kcal/kg) |
 | 25/11/2026 | Puppy Medium poulet (S4) | Prix | https://www.truffaut.com/croquettes-chiot-medium-healthy-development-au-poulet-12-kg-368800.html | ✓ Format 12 kg, vendu par Truffaut ; ancien nom « Healthy Development » |
 | 25/11/2026 | Puppy Medium poulet (S4) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/hills_science_plan_croquettes_chien/lots_economiques_croquettes_chien_hills/283618 | ✓ Variante « Puppy <1 Medium poulet », sac unique de 18 kg ; valable car le produit est aussi vendu chez Truffaut |
+| 25/11/2026 | Ultima | Éligibilité et prix | https://www.maxizoo.fr/c/marques/ultima/ | ✓ 9 croquettes chien vendues par Maxi Zoo ; absente de Truffaut d'après les recherches ; pas de vente directe |
+| 25/11/2026 | Ultima | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-medium-maxi-adult-poulet-1000297.html | ✓ Constituants analytiques affichés (25 % / 14 % / 3,2 % / 7 %, capture du 25/11/2026) : la section est chargée par un script, invisible pour l'outil de lecture automatique ; humidité et énergie non déclarées |
+| 25/11/2026 | Petit Adulte avec du Poulet (S1) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-petit-adulte-poulet-1000312.html | ✓ Formats 1,35, 2,75 et 7 kg ; matières grasses 16 % (contrôle visuel) ; humidité et énergie non déclarées |
+| 25/11/2026 | Petit Adulte avec du Poulet (S1) | Prix | https://www.maxizoo.fr/p/ultima-croquettes-petit-chien-adulte-poulet-135-kg-1384050/ | ✓ Formats 1,35 et 7 kg (27 % / 16 % / 2,5 % / 7 %) |
+| 25/11/2026 | Petit Adulte avec du Poulet (S1) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/ultima_croquettes_chien/croquettes/438808 | ✗ Matières grasses 17 % contre 16 % sur le site officiel : produit différent, non retenu |
+| 25/11/2026 | Medium-Maxi Adulte avec du Poulet (S2, S3) | Prix | https://www.maxizoo.fr/p/ultima-medium-maxi-adulte-avec-du-poulet-75-kg-1164912/ | ✓ Format 7,5 kg (24 % / 12 % / 3 % / 6,5 %) |
+| 25/11/2026 | Medium-Maxi Adulte avec du Poulet (S2, S3) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-medium-maxi-adult-poulet-repas-1000295.html | ✓ Référence 1000295 : constituants identiques au sac Maxi Zoo (contrôle visuel). Les références 1000294 et 1000297 ne sont pas retenues |
+| 25/11/2026 | Medium-Maxi Adulte avec du Poulet (S2, S3) | Prix | Zooplus | ✗ Seul un sac de 18 kg « poulet, riz » est proposé, format absent du site officiel : produit différent, non retenu |
+| 25/11/2026 | Medium-Maxi Senior avec du Poulet (S5) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-medium-maxi-senior-poulet-repas-1000301.html | ? Formats 2 et 7,5 kg ; constituants à relever visuellement |
+| 25/11/2026 | Medium-Maxi Senior avec du Poulet (S5) | Prix | https://www.maxizoo.fr/p/ultima-medium-maxi-senior-avec-du-poulet-75-kg-1164914/ | ✓ Format 7,5 kg. Zooplus (3 et 12 kg, formats absents du site officiel) non retenu |
+| 25/11/2026 | Petit Stérilisé avec du Poulet (S6) | Prix | https://www.maxizoo.fr/p/ultima-petit-strilis-avec-du-poulet-135-kg-1384104/ | ✓ Format 1,35 kg (29 % / 13 % / 5 % / 7,4 %) |
+| 25/11/2026 | Petit Stérilisé avec du Poulet (S6) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/ultima_croquettes_chien/2301653 | ✓ Sac unique de 1,35 kg, constituants identiques à Maxi Zoo (lot 2 × 1,35 kg non relevé) |
+| 25/11/2026 | Petit Stérilisé avec du Poulet (S6) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-petit-sterilise-poulet-1000322.html | ✓ Format 1,35 kg ; composition et constituants analytiques publiés ; chiens stérilisés de 1 à 10 kg |
+| 25/11/2026 | Medium-Maxi Light in Fat avec du Poulet (S6, candidat) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-medium-maxi-light-in-fat-poulet-1000306.html | ? Formats 2 et 7,5 kg ; constituants à relever visuellement |
+| 25/11/2026 | Medium-Maxi Light in Fat avec du Poulet (S6, candidat) | Prix | https://www.maxizoo.fr/p/ultima-medium-maxi-light-formule--fat--au-poulet-75-kg-1164913/ | ✓ Format 7,5 kg |
+| 25/11/2026 | Ultima (S4, S7) | Couverture | https://www.zooplus.fr/shop/chiens/croquettes_chien/ultima_croquettes_chien | ✗ Medium-Maxi Junior et Sensitive saumon seulement sur Zooplus, dans des formats absents du site officiel : aucun produit retenu |
+| 25/11/2026 | Petit Junior avec du Poulet (hors segment) | Données officielles | https://www.ultima-affinity.com/fr/fr/chien/nourriture-chien/seche-petit-junior-poulet-1000316.html | ✓ Chiot de petit gabarit ; formats 1,35 et 2,75 kg ; composition publiée, constituants à contrôler visuellement à la saisie |
+| 25/11/2026 | Petit Junior avec du Poulet (hors segment) | Prix | https://www.maxizoo.fr/p/ultima-petit-junior-avec-du-poulet-135-kg-1384101/ | ✓ Format 1,35 kg (31 % / 18,5 % / 2 % / 6,5 %). Pas de fiche Zooplus France trouvée |
+| 25/11/2026 | Ultima (S7) | Couverture | Site officiel, Maxi Zoo | ✗ Aucune croquette digestion sensible trouvée (recherche faite aussi par Adrian) |
+| 25/11/2026 | Purina (ONE) | Données officielles | https://www.purina.fr/chien/alimentation/purina-one/chien | ✓ 9 croquettes chien : Mini/Small (bœuf, active, sans céréales, contrôle du poids), Medium/Maxi (poulet, bœuf, agneau, active, contrôle du poids) ; ni chiot, ni senior, ni digestion |
+| 25/11/2026 | Purina (ONE) | Prix | https://www.maxizoo.fr/c/marques/purina-one/ | ✗ Une seule croquette chien : Mini Adult Saumon 3 × 800 g, recette absente du site officiel français |
+| 25/11/2026 | Purina (ONE) | Prix | Truffaut | ✗ Purina ONE vendu pour chats uniquement d'après les recherches |
+| 25/11/2026 | Purina (ONE) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/purina_one_croquettes_chien | ✗ Gamme disponible, mais Zooplus ne compte pas sans autre circuit éligible (RG-04) |
 
 ## 7. Décisions
 
@@ -184,4 +208,14 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 - **S4 Purina Pro Plan (25/11/2026)** : Medium Puppy Healthy Start prioritaire (même gabarit que le Medium Puppy Royal Canin),
   Large Athletic Puppy Sensitive Digestion candidat ; Small & Mini Puppy Healthy Start classé hors segment (S4 vise les gabarits
   moyen et grand), conservé pour la couverture des chiots de petit gabarit.
+- **Ultima retenue (25/11/2026)** : écartée dans un premier temps (constituants non trouvés par l'outil de lecture automatique),
+  puis réintégrée après contrôle visuel : les constituants sont affichés par un script. Conséquence : une absence de donnée constatée
+  automatiquement est toujours confirmée visuellement avant d'écarter un produit.
+- **Purina ONE écartée (25/11/2026)** : aucune croquette chien du site officiel n'est vendue par Truffaut ou Maxi Zoo (étape 2) ;
+  la gamme est surtout distribuée en grande distribution et sur Zooplus. Décision à revoir si Animalis la vend.
+- **Même produit chez deux revendeurs (25/11/2026)** : une seconde source de prix n'est retenue que si le produit est le même :
+  même nom, format présent dans la liste officielle, constituants identiques. Une marque peut vendre sous le même nom des recettes
+  différentes selon les pays ou les circuits.
+- **Deux sources de prix (25/11/2026)** : quand la marque ne vend pas en direct, on cherche deux sources de prix par produit
+  lorsque c'est possible.
 - (à compléter : marques écartées et raison, arbitrages entre produits)
