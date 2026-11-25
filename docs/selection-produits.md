@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.10 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.11 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -66,7 +66,7 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 6 | Real Nature (Wilderness) | ✓ marque propre de Maxi Zoo | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
 | 7 | Josera (gamme principale) | ✓ | ✓ vente directe josera.fr, Zooplus | ✓ (énergie déclarée, humidité non déclarée) | Retenue |
 | 8 | Acana | ✓ | ✓ Animalis (source unique : offres Zooplus de vendeurs partenaires, fiche Truffaut indisponible) | ✓ (humidité 12 % et énergie déclarées) | Retenue |
-| 9 | Eukanuba | ? | ? | ? | |
+| 9 | Eukanuba (Life Care) | ✓ | ✓ Animalis, Truffaut ; pas de vente directe ; Zooplus non retenu (ancienne gamme) | ✓ (humidité et énergie non déclarées) | Retenue |
 | 10 | Select Gold (Maxi Zoo) | ? | ? | ? | |
 | 11 | Edgard & Cooper | ? | ? | ? | |
 | 12 | Nature's Variety | ? | ? | ? | |
@@ -90,7 +90,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Real Nature (Wilderness) | Mini Adult Green Coast (canard, saumon, crevettes) | Adult True Country (poulet, poisson) | Adult grande taille Wide Savannah (sanglier, agneau, canard) | Maxi Junior Pur Canard | Senior True Country (poulet, poisson) | — | — | — | 5 |
 | Josera (gamme principale) | Mini Chicken & Rice | Medi/Maxi Chicken & Rice | Medi/Maxi Chicken & Rice (même produit qu'en S2 : moyennes et grandes races) | Kids | Balance (senior) | — | SensiPlus | — | 5 |
 | Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 6 (+1 candidat) |
-| **Marques par segment** | 7 | 7 | 7 | 6 | 7 | 5 | 4 | | |
+| Eukanuba (Life Care) | Adulte petites races poulet frais | Adulte moyennes races poulet frais | Adulte grandes races poulet frais | Chiot grandes races agneau et riz | Senior moyennes races poulet frais | — | — | — | 5 |
+| **Marques par segment** | 8 | 8 | 8 | 7 | 8 | 5 | 4 | | |
 
 ## 6. Journal des vérifications
 
@@ -218,6 +219,14 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | Light & Fit Recipe (S6) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-light-fit.html | ✓ Adulte toutes races, maintien d'un poids sain ; non présenté comme aliment diététique ; 2, 6 et 11,4 kg ; humidité 12 % ; Animalis : https://www.animalis.com/acana-croquettes-heritage-light-fit-pour-chien-PM600006_M.html |
 | 25/11/2026 | Puppy Small Breed Recipe (hors segment) | Données et prix | https://emea.acana.com/fr-FR/pour-chiens/eu-aca-puppy-small.html | ✓ Chiot petit gabarit ; Animalis : https://www.animalis.com/acana-croquettes-heritage-puppy-small-breed-pour-chiot-PM221902_M.html |
 | 25/11/2026 | Acana (S7) | Couverture | Site officiel, Animalis | ✗ Aucune croquette digestion sensible |
+| 25/11/2026 | Eukanuba | Éligibilité et données | https://www.eukanuba.eu/fr-fr/chien/croquettes/adulte-petites-races-poulet-frais | ✓ Nouvelle gamme Life Care ; composition et constituants publiés ; humidité et énergie non déclarées ; Zooplus vend surtout l'ancienne gamme « Premium Nutrition » : non retenu |
+| 25/11/2026 | Adulte petites races poulet frais (S1) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/adulte-petites-races-poulet-frais | ✓ 1 à 8 ans, 2 à 10 kg ; 3, 7,5 et 15 kg ; Animalis (3 et 15 kg) : https://www.animalis.com/eukanuba-croquettes-riche-en-poulet-frais-pour-chien-adulte-s-PM800705_M.html |
+| 25/11/2026 | Adulte moyennes races poulet frais (S2) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/adulte-moyennes-races-poulet-frais | ✓ 1 à 7 ans ; 3 et 15 kg ; Animalis (3 et 15 kg) : https://www.animalis.com/eukanuba-croquettes-riche-en-poulet-frais-pour-chien-adulte-m-PM800706_M.html ; Truffaut 15 kg (vendu par Truffaut, indisponible en ligne) : https://www.truffaut.com/croquettes-au-poulet-pour-chien-adulte-taille-moyenne-15kg-1111874.html |
+| 25/11/2026 | Adulte grandes races poulet frais (S3) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/adulte-grandes-races-poulet-frais | ✓ 25 à 90 kg ; 3 et 15 kg ; Animalis (3 et 15 kg) : https://www.animalis.com/eukanuba-croquettes-riche-en-poulet-frais-pour-chien-adulte-l/xl-PM800707_M.html |
+| 25/11/2026 | Chiot grandes races agneau et riz (S4) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/chiot-grandes-races-agneau-et-riz | ✓ 1 à 18 mois (géantes : 24 mois) ; 3 et 12 kg ; Truffaut 12 kg (vendu par Truffaut, en stock) : https://www.truffaut.com/croquettes-agneau-au-riz-pour-chiot-grande-taille-12kg-1111876.html ; Animalis : https://www.animalis.com/eukanuba-croquettes-riche-en-agneau-pour-chiot-l/xl-PM800704_M.html |
+| 25/11/2026 | Senior moyennes races poulet frais (S5) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/senior-moyennes-races-poulet-frais | ✓ 10 ans et plus ; 3 et 15 kg ; Animalis (3 et 15 kg) : https://www.animalis.com/eukanuba-croquettes-riche-en-poulet-frais-pour-chien-senior-m-PM800711_M.html |
+| 25/11/2026 | Special Care Weight Control (S6) | Prix | https://www.maxizoo.fr/p/eukanuba-weight-control-medium-breed-15-kg-1013178/ | ✗ Format 15 kg absent du site officiel (2,3 et 12 kg) et constituants différents (cellulose 2,5 % contre 2,7 %, cendres 7 % contre 6 %) : ancienne recette, non retenue |
+| 25/11/2026 | Special Care Sensitive Digestion (S7) | Prix | https://www.maxizoo.fr/p/eukanuba-daily-care-digestion-sensible-2x12-kg-1297527/ | ✗ Lot 2 × 12 kg uniquement, indisponible ; absent d'Animalis (contrôle d'Adrian) |
 
 ## 7. Décisions
 
