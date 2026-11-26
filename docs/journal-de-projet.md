@@ -84,11 +84,28 @@
 - Alternative écartée : sources de la grande distribution (reportées en évolution future).
 - Conséquences : relevés manuels ; une marque sans relevé de prix possible dans les sources retenues est écartée de la sélection.
 
+### Décision : conditions du prix relevé (25/11/2026)
+- Règle : prix public standard, en achat unique, sans abonnement, code promo, remise de fidélité ni frais de port ;
+  en cas de promotion affichée, prix barré ; lots et sacs promotionnels non relevés (RG-03).
+- Raisons : les marques (vente directe) comme les revendeurs proposent des remises conditionnelles ;
+  le prix barré est réglementé (prix le plus bas des 30 jours précédant la réduction) ;
+  une promotion se termine souvent avant la mise à jour suivante des relevés.
+- Conséquence : un produit peut avoir plusieurs relevés (vente directe marque et revendeurs) ;
+  le comparateur affiche le prix au kilo le plus bas, avec sa source et sa date.
+
 ### Décision : volume cible de 30 à 45 produits
 - Principe de sélection : couvrir des segments communs à plusieurs marques (stade de vie, gabarit, stérilisé/light, digestion sensible),
   puis popularité (indicateur : classements « meilleures ventes » des revendeurs, datés), puis disponibilité des données.
 - Raisons : rendre les comparaisons pertinentes ; volume réaliste pour une saisie vérifiée.
 - Conséquences : production d'une matrice marque × segment documentée.
+
+### Décision : volume révisé à 61 produits de 11 marques (26/11/2026)
+- Contexte : la collecte a couvert 17 marques candidates ; 11 retenues, 6 écartées (prix, site officiel, RG-02).
+- Choix : conserver les 59 produits des segments et 2 chiots de petit gabarit, plutôt que redescendre à 45.
+- Raisons : couverture complète des filtres et des calculs (humidité déclarée ou non, avec ou sans céréales,
+  plusieurs sources de prix) ; variété des protéines et des gammes pour la démonstration.
+- Conséquences : saisie principalement par fichier de données et script d'import ; back-office réservé
+  à la démonstration sur quelques produits ; indicateurs de l'expression des besoins mis à jour.
 
 ### Décision : exclusion des aliments vétérinaires
 - Règle : exclusion des aliments diététiques destinés à des pathologies et des gammes distribuées exclusivement par les vétérinaires.
