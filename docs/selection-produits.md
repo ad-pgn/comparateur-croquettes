@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.11 — 25 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.12 — 26 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba, Select Gold retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -67,7 +67,7 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 7 | Josera (gamme principale) | ✓ | ✓ vente directe josera.fr, Zooplus | ✓ (énergie déclarée, humidité non déclarée) | Retenue |
 | 8 | Acana | ✓ | ✓ Animalis (source unique : offres Zooplus de vendeurs partenaires, fiche Truffaut indisponible) | ✓ (humidité 12 % et énergie déclarées) | Retenue |
 | 9 | Eukanuba (Life Care) | ✓ | ✓ Animalis, Truffaut ; pas de vente directe ; Zooplus non retenu (ancienne gamme) | ✓ (humidité et énergie non déclarées) | Retenue |
-| 10 | Select Gold (Maxi Zoo) | ? | ? | ? | |
+| 10 | Select Gold (Complete, Light, Sensitive) | ✓ marque propre de Maxi Zoo ; gamme Medica exclue (RG-02) | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
 | 11 | Edgard & Cooper | ? | ? | ? | |
 | 12 | Nature's Variety | ? | ? | ? | |
 | 13 | Lily's Kitchen | ? | ? | ? | |
@@ -91,7 +91,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Josera (gamme principale) | Mini Chicken & Rice | Medi/Maxi Chicken & Rice | Medi/Maxi Chicken & Rice (même produit qu'en S2 : moyennes et grandes races) | Kids | Balance (senior) | — | SensiPlus | — | 5 |
 | Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 6 (+1 candidat) |
 | Eukanuba (Life Care) | Adulte petites races poulet frais | Adulte moyennes races poulet frais | Adulte grandes races poulet frais | Chiot grandes races agneau et riz | Senior moyennes races poulet frais | — | — | — | 5 |
-| **Marques par segment** | 8 | 8 | 8 | 7 | 8 | 5 | 4 | | |
+| Select Gold (Complete, Light, Sensitive) | Complete Mini Adulte Poulet | Complete Medium Adulte Poulet | Complete Maxi Adulte Bœuf | Complete Maxi Junior Poulet | Complete Medium Senior Poulet | Light Medium Adulte Poulet | Sensitive Medium Adulte Cheval au tapioca | — | 7 |
+| **Marques par segment** | 9 | 9 | 9 | 8 | 9 | 6 | 5 | | |
 
 ## 6. Journal des vérifications
 
@@ -227,6 +228,14 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 25/11/2026 | Senior moyennes races poulet frais (S5) | Données et prix | https://www.eukanuba.eu/fr-fr/chien/croquettes/senior-moyennes-races-poulet-frais | ✓ 10 ans et plus ; 3 et 15 kg ; Animalis (3 et 15 kg) : https://www.animalis.com/eukanuba-croquettes-riche-en-poulet-frais-pour-chien-senior-m-PM800711_M.html |
 | 25/11/2026 | Special Care Weight Control (S6) | Prix | https://www.maxizoo.fr/p/eukanuba-weight-control-medium-breed-15-kg-1013178/ | ✗ Format 15 kg absent du site officiel (2,3 et 12 kg) et constituants différents (cellulose 2,5 % contre 2,7 %, cendres 7 % contre 6 %) : ancienne recette, non retenue |
 | 25/11/2026 | Special Care Sensitive Digestion (S7) | Prix | https://www.maxizoo.fr/p/eukanuba-daily-care-digestion-sensible-2x12-kg-1297527/ | ✗ Lot 2 × 12 kg uniquement, indisponible ; absent d'Animalis (contrôle d'Adrian) |
+| 26/11/2026 | Select Gold | Éligibilité et données | https://www.maxizoo.fr/c/chien/nourriture-pour-chien/nourriture-seche/?q=::brand:SELE | ✓ Marque propre de Maxi Zoo, 47 références de croquettes ; la fiche Maxi Zoo tient lieu de site officiel ; gamme Medica (19 références d'aliments diététiques) exclue par RG-02 |
+| 26/11/2026 | Complete Mini Adulte Poulet (S1) | Données et prix | https://www.maxizoo.fr/p/select-gold-complete-croquettes-chien-adulte-mini-poulet-4-kg-1001478003/ | ✓ 5 à 10 kg, dès 8 mois ; 1, 4 et 10 kg ; composition et constituants publiés ; humidité et énergie non déclarées |
+| 26/11/2026 | Complete Medium Adulte Poulet (S2) | Données et prix | https://www.maxizoo.fr/p/select-gold-complete-croquettes-chien-adulte-medium-poulet-4-kg-1001478007/ | ✓ 11 à 25 kg, dès 12 mois ; 4 et 12 kg (12 kg marqué « PROMO friends » : prix non-membre à relever) |
+| 26/11/2026 | Complete Maxi Adulte Bœuf (S3) | Données et prix | https://www.maxizoo.fr/p/select-gold-complete-croquettes-chien-adulte-maxi-buf-4-kg-1001478013/ | ✓ Plus de 25 kg, dès 15 mois ; 4 et 12 kg ; 4 kg en promotion (prix barré 27,99 € à relever) |
+| 26/11/2026 | Complete Maxi Junior Poulet (S4) | Données et prix | https://www.maxizoo.fr/p/select-gold-complete-maxi-junior-poulet-12-kg-1001492001/ | ✓ Grandes races (25 kg et plus), jusqu'à environ 15 mois ; 12 kg (« PROMO friends » : prix non-membre à relever) |
+| 26/11/2026 | Complete Medium Senior Poulet (S5) | Données et prix | https://www.maxizoo.fr/p/select-gold-croquettes-pour-chien-complete-medium-senior-au-poulet-4-kg-1001478010/ | ✓ 11 à 25 kg, dès 8 ans ; 4 et 12 kg (12 kg « PROMO friends ») |
+| 26/11/2026 | Light Medium Adulte Poulet (S6) | Données et prix | https://www.maxizoo.fr/p/select-gold-croquettes-chien-light-medium-adulte-poulet-4-kg-1001478009/ | ✓ 11 à 25 kg, tendance au surpoids ; aliment complet (pas « diététique ») ; 4 et 12 kg |
+| 26/11/2026 | Sensitive Medium Adulte Cheval au tapioca (S7) | Données et prix | https://www.maxizoo.fr/p/select-gold-sensitive--croquettes-pour-chiens-adultes-de-taille-moyenne-cheval-au-tapioca-1-kg-1001743015/ | ✓ 11 à 25 kg, dès 12 mois ; « soulage le système digestif », « idéal en cas d'intolérances » ; 1, 4 et 12 kg (lot 2 × 12 kg non relevé) |
 
 ## 7. Décisions
 
@@ -268,6 +277,8 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 - **Josera, promotion « Black Week » (25/11/2026)** : dans le doute, on relève le prix PVC barré.
 - **Animalis (25/11/2026)** : le site animalis.com est mal indexé par l'outil de recherche ; la présence d'une marque chez Animalis
   est vérifiée à la main avant d'écarter la marque (cas d'Acana, d'abord jugée sans source de prix).
+- **Prix fidélité Maxi Zoo (26/11/2026)** : un prix marqué « PROMO friends » est réservé aux membres du programme de fidélité ;
+  on relève le prix non-membre. Si la fiche n'affiche que le prix membre, le format n'est pas relevé.
 - **Ajout de marques (25/11/2026)** : si, une fois la liste des candidates épuisée, un segment ou la section 3 bis n'est pas couvert,
   on ajoute d'autres marques candidates, en appliquant la même méthode.
 - **Même produit chez deux revendeurs (25/11/2026)** : une seconde source de prix n'est retenue que si le produit est le même :
