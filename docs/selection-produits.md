@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.12 — 26 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba, Select Gold retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.13 — 26 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba, Select Gold, Edgard & Cooper retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -68,7 +68,7 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 8 | Acana | ✓ | ✓ Animalis (source unique : offres Zooplus de vendeurs partenaires, fiche Truffaut indisponible) | ✓ (humidité 12 % et énergie déclarées) | Retenue |
 | 9 | Eukanuba (Life Care) | ✓ | ✓ Animalis, Truffaut ; pas de vente directe ; Zooplus non retenu (ancienne gamme) | ✓ (humidité et énergie non déclarées) | Retenue |
 | 10 | Select Gold (Complete, Light, Sensitive) | ✓ marque propre de Maxi Zoo ; gamme Medica exclue (RG-02) | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
-| 11 | Edgard & Cooper | ? | ? | ? | |
+| 11 | Edgard & Cooper | ✓ | ✓ vente directe, Zooplus, Truffaut (adulte) | ✓ contrôle visuel (énergie déclarée, humidité non déclarée) | Retenue |
 | 12 | Nature's Variety | ? | ? | ? | |
 | 13 | Lily's Kitchen | ? | ? | ? | |
 | 14 | Marque propre Truffaut (nom à identifier) | ? | ? | ? | |
@@ -92,7 +92,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 6 (+1 candidat) |
 | Eukanuba (Life Care) | Adulte petites races poulet frais | Adulte moyennes races poulet frais | Adulte grandes races poulet frais | Chiot grandes races agneau et riz | Senior moyennes races poulet frais | — | — | — | 5 |
 | Select Gold (Complete, Light, Sensitive) | Complete Mini Adulte Poulet | Complete Medium Adulte Poulet | Complete Maxi Adulte Bœuf | Complete Maxi Junior Poulet | Complete Medium Senior Poulet | Light Medium Adulte Poulet | Sensitive Medium Adulte Cheval au tapioca | — | 7 |
-| **Marques par segment** | 9 | 9 | 9 | 8 | 9 | 6 | 5 | | |
+| Edgard & Cooper | — | Adulte Poulet Frais (toutes tailles) | — | Chiot Canard et Poulet frais (toutes tailles) | Senior Poulet & Saumon Frais | — | — | — | 3 |
+| **Marques par segment** | 9 | 10 | 9 | 9 | 10 | 6 | 5 | | |
 
 ## 6. Journal des vérifications
 
@@ -236,6 +237,15 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 26/11/2026 | Complete Medium Senior Poulet (S5) | Données et prix | https://www.maxizoo.fr/p/select-gold-croquettes-pour-chien-complete-medium-senior-au-poulet-4-kg-1001478010/ | ✓ 11 à 25 kg, dès 8 ans ; 4 et 12 kg (12 kg « PROMO friends ») |
 | 26/11/2026 | Light Medium Adulte Poulet (S6) | Données et prix | https://www.maxizoo.fr/p/select-gold-croquettes-chien-light-medium-adulte-poulet-4-kg-1001478009/ | ✓ 11 à 25 kg, tendance au surpoids ; aliment complet (pas « diététique ») ; 4 et 12 kg |
 | 26/11/2026 | Sensitive Medium Adulte Cheval au tapioca (S7) | Données et prix | https://www.maxizoo.fr/p/select-gold-sensitive--croquettes-pour-chiens-adultes-de-taille-moyenne-cheval-au-tapioca-1-kg-1001743015/ | ✓ 11 à 25 kg, dès 12 mois ; « soulage le système digestif », « idéal en cas d'intolérances » ; 1, 4 et 12 kg (lot 2 × 12 kg non relevé) |
+| 26/11/2026 | Edgard & Cooper | Données officielles | https://www.edgardcooper.com/fr/collections/dogs/ | ✓ Site chargé par un script, illisible par l'outil : relevé visuel d'Adrian. Vente directe en euros ; recettes sans distinction de gabarit ; aucune recette light ou digestion sensible |
+| 26/11/2026 | Adulte Poulet Frais (S2) | Données officielles | https://www.edgardcooper.com/fr/collections/dogs/ | ✓ Toutes tailles ; 0,7, 1, 2,5, 3, 7 et 12 kg ; constituants publiés ; énergie 371,1 kcal/100 g ; humidité non déclarée |
+| 26/11/2026 | Adulte Poulet Frais (S2) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/edgard_cooper | ✓ Vendu par Zooplus sous « Medium Adult Dog Poulet » (2,5 et 7 kg) et « Large Adult Dog Poulet » (12 kg) : formats officiels, même produit ; valable car vendu en direct par la marque |
+| 26/11/2026 | Adulte Poulet Frais (S2) | Prix | https://www.truffaut.com/croquettes-canard-poulet-7kg-749235.html | ✓ « Croquettes chien adultes sans céréales au poulet frais, toutes tailles », 7 kg, vendu par Truffaut (livraison indisponible lors de la vérification) |
+| 26/11/2026 | Chiot Canard et Poulet frais (S4) | Données officielles | https://www.edgardcooper.com/fr/collections/dogs/ | ✓ Toutes tailles ; 1, 2,5, 3, 7 et 12 kg ; énergie 383,2 kcal/100 g ; humidité non déclarée |
+| 26/11/2026 | Chiot Canard et Poulet frais (S4) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/edgard_cooper/chiot/1613832 | ✓ Vendu par Zooplus (« Medium Puppy » 2,5 et 7 kg, « Large Puppy » 12 kg) |
+| 26/11/2026 | Senior Poulet & Saumon Frais (S5) | Données officielles | https://www.edgardcooper.com/fr/collections/dogs/ | ✓ 2,5, 7 et 12 kg ; énergie 348,6 kcal/100 g ; humidité non déclarée |
+| 26/11/2026 | Senior Poulet & Saumon Frais (S5) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/edgard_cooper/senior/1599918 | ✓ Vendu par Zooplus (« Medium Senior » 2,5 et 7 kg, « Large Senior » 12 kg) |
+| 26/11/2026 | Edgard & Cooper | Prix | Animalis | ? Fiches présentes, mais inaccessibles à l'outil (accès refusé par le site) : non comptées |
 
 ## 7. Décisions
 
@@ -277,6 +287,9 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 - **Josera, promotion « Black Week » (25/11/2026)** : dans le doute, on relève le prix PVC barré.
 - **Animalis (25/11/2026)** : le site animalis.com est mal indexé par l'outil de recherche ; la présence d'une marque chez Animalis
   est vérifiée à la main avant d'écarter la marque (cas d'Acana, d'abord jugée sans source de prix).
+- **Produits sans gabarit (26/11/2026)** : une recette adulte destinée à toutes les tailles est rangée en S2 dans la matrice ;
+  dans l'application, son gabarit est « tous » et elle répond à tous les filtres de taille (cas d'Acana Adult Dog, Real Nature
+  True Country, Edgard & Cooper).
 - **Prix fidélité Maxi Zoo (26/11/2026)** : un prix marqué « PROMO friends » est réservé aux membres du programme de fidélité ;
   on relève le prix non-membre. Si la fiche n'affiche que le prix membre, le format n'est pas relevé.
 - **Ajout de marques (25/11/2026)** : si, une fois la liste des candidates épuisée, un segment ou la section 3 bis n'est pas couvert,
