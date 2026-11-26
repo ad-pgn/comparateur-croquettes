@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.13 — 26 novembre 2026 (Pro Plan, Hill's, Ultima, Real Nature, Josera, Acana, Eukanuba, Select Gold, Edgard & Cooper retenues ; Purina ONE et Advance écartées ; règles de prix et de correspondance). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.14 — 26 novembre 2026 (11 marques retenues ; Purina ONE, Advance et Lily's Kitchen écartées ; nouvelles candidates repérées chez Animalis). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -69,11 +69,12 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 9 | Eukanuba (Life Care) | ✓ | ✓ Animalis, Truffaut ; pas de vente directe ; Zooplus non retenu (ancienne gamme) | ✓ (humidité et énergie non déclarées) | Retenue |
 | 10 | Select Gold (Complete, Light, Sensitive) | ✓ marque propre de Maxi Zoo ; gamme Medica exclue (RG-02) | ✓ Maxi Zoo (source unique, marque exclusive) | ✓ fiches Maxi Zoo (humidité et énergie non déclarées) | Retenue |
 | 11 | Edgard & Cooper | ✓ | ✓ vente directe, Zooplus, Truffaut (adulte) | ✓ contrôle visuel (énergie déclarée, humidité non déclarée) | Retenue |
-| 12 | Nature's Variety | ? | ? | ? | |
-| 13 | Lily's Kitchen | ? | ? | ? | |
+| 12 | Nature's Variety (No Grain) | ✓ | ✓ Maxi Zoo, Animalis, Zooplus ; fiches Truffaut non retenues | ✓ contrôle visuel (humidité et énergie non déclarées) | Retenue |
+| 13 | Lily's Kitchen | ✓ | ✓ Truffaut, Zooplus, Animalis | ✗ pas de site officiel français | Écartée (étape 3) |
 | 14 | Marque propre Truffaut (nom à identifier) | ? | ? | ? | |
-| 15 | Marque propre Animalis (nom à identifier) | ? | ? | ? | |
+| 15 | True Origins (Pure, Wild), probable marque propre d'Animalis | ? | ? | ? | |
 | 16 | Virbac Veterinary HPM | ? | ? | ? | Éligibilité douteuse (RG-02) |
+| 17 | Réserve (repérées chez Animalis le 26/11/2026) : Ownat, Natura Diet, Pro-Nutrition Flatazor, Orijen, Wellness, Carnilove, Taste of the Wild | ? | ? | ? | À étudier si un segment manque de marques |
 
 ## 5. Matrice marque × segment
 
@@ -93,7 +94,8 @@ de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit g
 | Eukanuba (Life Care) | Adulte petites races poulet frais | Adulte moyennes races poulet frais | Adulte grandes races poulet frais | Chiot grandes races agneau et riz | Senior moyennes races poulet frais | — | — | — | 5 |
 | Select Gold (Complete, Light, Sensitive) | Complete Mini Adulte Poulet | Complete Medium Adulte Poulet | Complete Maxi Adulte Bœuf | Complete Maxi Junior Poulet | Complete Medium Senior Poulet | Light Medium Adulte Poulet | Sensitive Medium Adulte Cheval au tapioca | — | 7 |
 | Edgard & Cooper | — | Adulte Poulet Frais (toutes tailles) | — | Chiot Canard et Poulet frais (toutes tailles) | Senior Poulet & Saumon Frais | — | — | — | 3 |
-| **Marques par segment** | 9 | 10 | 9 | 9 | 10 | 6 | 5 | | |
+| Nature's Variety (No Grain) | No Grain Mini Adulte Poulet | No Grain Adulte Medium/Maxi Poulet | No Grain Adulte Medium/Maxi Poulet (même produit qu'en S2 : plus de 10 kg) | No Grain Puppy Medium/Maxi Saumon | — | — | — | No Grain Chiot Mini Saumon (chiot petit gabarit) | 3 (+1 candidat) |
+| **Marques par segment** | 10 | 11 | 10 | 10 | 10 | 6 | 5 | | |
 
 ## 6. Journal des vérifications
 
@@ -246,6 +248,17 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 26/11/2026 | Senior Poulet & Saumon Frais (S5) | Données officielles | https://www.edgardcooper.com/fr/collections/dogs/ | ✓ 2,5, 7 et 12 kg ; énergie 348,6 kcal/100 g ; humidité non déclarée |
 | 26/11/2026 | Senior Poulet & Saumon Frais (S5) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/edgard_cooper/senior/1599918 | ✓ Vendu par Zooplus (« Medium Senior » 2,5 et 7 kg, « Large Senior » 12 kg) |
 | 26/11/2026 | Edgard & Cooper | Prix | Animalis | ? Fiches présentes, mais inaccessibles à l'outil (accès refusé par le site) : non comptées |
+| 26/11/2026 | Nature's Variety | Prix | https://www.truffaut.com/croquette-chien-original-medium-max-poulet-nature-s-variety.html | ✗ Fiches Truffaut sans numéro de référence, indisponibles, avec vendeurs partenaires et prix incohérents : non retenues |
+| 26/11/2026 | Nature's Variety | Éligibilité et prix | https://www.maxizoo.fr/c/marques/natures-variety/ | ✓ 14 croquettes chien vendues par Maxi Zoo (toutes à -20 % : prix barrés à relever) ; présente chez Animalis (21 références) ; Zooplus valable en seconde source |
+| 26/11/2026 | Nature's Variety | Données officielles | https://www.naturesvariety.com/fr/chien/croquettes-chien/selected-no-grain-medium-maxi-poulet-plein-air-1000199.html | ✓ Site inaccessible à l'outil : contrôle visuel d'Adrian (composition, additifs et constituants affichés ; humidité et énergie non déclarées) |
+| 26/11/2026 | No Grain Mini Adulte Poulet (S1) | Prix | https://www.maxizoo.fr/p/natures-variety-no-grain-mini-adulte-poulet-15-kg-1356577/ | ✓ Adulte 1 à 10 kg ; 1,5 kg |
+| 26/11/2026 | No Grain Adulte Medium/Maxi Poulet (S2, S3) | Prix | https://www.maxizoo.fr/p/natures-variety-no-grain-adulte-medmax-poulet-3-kg-2035040/ | ✓ Adulte de plus de 10 kg ; 3 et 10 kg |
+| 26/11/2026 | No Grain Adulte Medium/Maxi Poulet (S2, S3) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/natures_variety/selected/1077709 | ✓ Vendu par Zooplus |
+| 26/11/2026 | No Grain Puppy Medium/Maxi Saumon (S4) | Prix | https://www.maxizoo.fr/p/natures-variety-no-grain-puppy-medmax-saumon-10-kg-2035045/ | ✓ Chiot medium/maxi, 2 à 12 mois ; 10 kg |
+| 26/11/2026 | No Grain Puppy Medium/Maxi Saumon (S4) | Prix | https://www.zooplus.fr/shop/chiens/croquettes_chien/natures_variety/original_no_grain/1077716 | ✓ Vendu par Zooplus |
+| 26/11/2026 | No Grain Chiot Mini Saumon (hors segment) | Prix | https://www.maxizoo.fr/p/natures-variety-no-grain-chiot-mini-saumon-15kg-2035046/ | ✓ Chiot mini, 2 à 12 mois ; 1,5 kg |
+| 26/11/2026 | Lily's Kitchen | Données officielles | Recherche web | ✗ Pas de site officiel français trouvé (site britannique, recettes possiblement différentes) ; gamme française limitée aux adultes toutes tailles |
+| 26/11/2026 | Animalis | Marques | https://www.animalis.com/chiens/alimentation/croquettes/?start=0&page=1 | 48 marques de croquettes chien ; Purina ONE et Advance absentes (confirmé) |
 
 ## 7. Décisions
 
@@ -287,6 +300,10 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 - **Josera, promotion « Black Week » (25/11/2026)** : dans le doute, on relève le prix PVC barré.
 - **Animalis (25/11/2026)** : le site animalis.com est mal indexé par l'outil de recherche ; la présence d'une marque chez Animalis
   est vérifiée à la main avant d'écarter la marque (cas d'Acana, d'abord jugée sans source de prix).
+- **Lily's Kitchen écartée (26/11/2026)** : aucun site officiel français ne publie les données des produits vendus en France (étape 3) ;
+  la marque n'aurait de toute façon couvert que S2, déjà largement fourni.
+- **Fiches Truffaut sans numéro de référence (26/11/2026)** : les fiches dont l'adresse ne se termine pas par un numéro de
+  référence Truffaut se sont toutes révélées indisponibles ou partagées avec des vendeurs partenaires ; elles ne sont pas retenues.
 - **Produits sans gabarit (26/11/2026)** : une recette adulte destinée à toutes les tailles est rangée en S2 dans la matrice ;
   dans l'application, son gabarit est « tous » et elle répond à tous les filtres de taille (cas d'Acana Adult Dog, Real Nature
   True Country, Edgard & Cooper).
