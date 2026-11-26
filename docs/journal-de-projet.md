@@ -99,6 +99,14 @@
 - Raisons : rendre les comparaisons pertinentes ; volume réaliste pour une saisie vérifiée.
 - Conséquences : production d'une matrice marque × segment documentée.
 
+### Décision : volume révisé à 61 produits de 11 marques (26/11/2026)
+- Contexte : la collecte a couvert 17 marques candidates ; 11 retenues, 6 écartées (prix, site officiel, RG-02).
+- Choix : conserver les 59 produits des segments et 2 chiots de petit gabarit, plutôt que redescendre à 45.
+- Raisons : couverture complète des filtres et des calculs (humidité déclarée ou non, avec ou sans céréales,
+  plusieurs sources de prix) ; variété des protéines et des gammes pour la démonstration.
+- Conséquences : saisie principalement par fichier de données et script d'import ; back-office réservé
+  à la démonstration sur quelques produits ; indicateurs de l'expression des besoins mis à jour.
+
 ### Décision : exclusion des aliments vétérinaires
 - Règle : exclusion des aliments diététiques destinés à des pathologies et des gammes distribuées exclusivement par les vétérinaires.
 - Raisons : usage sur prescription ; hors du besoin d'un propriétaire qui compare librement.

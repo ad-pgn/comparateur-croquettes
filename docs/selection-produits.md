@@ -1,12 +1,13 @@
 # Sélection des produits
 
-> Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.15 — 26 novembre 2026 (collecte terminée : 11 marques retenues, 6 écartées). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Issue #12. Sélection figée le 26 novembre 2026 : elle sert de référence pour la saisie du catalogue.
+> Version 1.0 — 26 novembre 2026 (filtrage final : 61 produits, 11 marques). Versions de travail 0.1 à 0.15 du 14 au 26 novembre 2026. Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
-Choisir **30 à 45 produits** de **10 à 12 marques** (expression des besoins, section 4), de façon documentée et reproductible,
-pour que le comparateur propose des comparaisons pertinentes dès sa mise en ligne.
+Choisir les produits du catalogue initial de façon documentée et reproductible, pour que le comparateur propose des comparaisons
+pertinentes dès sa mise en ligne. Cible initiale : 30 à 45 produits de 10 à 12 marques ; cible révisée lors du filtrage final :
+**61 produits de 11 marques** (section 7).
 
 ## 2. Méthode
 
@@ -78,24 +79,24 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 
 ## 5. Matrice marque × segment
 
-Chaque case contient le nom exact du produit prioritaire, les autres produits collectés entre parenthèses (« candidat »),
-ou « — » si la marque n'a pas de produit dans ce segment. La colonne « Hors segment » garde les produits utiles à la couverture
+Chaque case contient le nom exact du produit retenu, ou « — » si la marque n'a pas de produit retenu dans ce segment.
+Un produit « toutes tailles » ou « moyen et grand » qui apparaît en S2 et S3 n'est compté qu'une fois. La colonne « Hors segment » garde les produits utiles à la couverture
 de la section 3 bis sans entrer dans un segment (par exemple un chiot de petit gabarit, S4 visant les gabarits moyen et grand).
 
 | Marque (gamme) | S1 | S2 | S3 | S4 | S5 | S6 | S7 | Hors segment | Total |
 |---|---|---|---|---|---|---|---|---|---|
-| Royal Canin (Size Health Nutrition) | Mini Adult | Medium Adult | Maxi Adult | Medium Puppy (candidat : Maxi Puppy) | Medium Ageing 10+ | X-Small Sterilised | Maxi Digestive Care | — | 7 (+1 candidat) |
-| Purina (Pro Plan) | Small & Mini Adult Everyday Nutrition | Medium Adult Everyday Nutrition | Large Athletic Adult Everyday Nutrition | Medium Puppy Healthy Start (candidat : Large Athletic Puppy Sensitive Digestion) | Medium & Large Adult 7+ Age Defence | All Sizes Adult Light / Sterilised poisson blanc | Medium & Large Adult Sensitive Digestion Grain Free dinde | Small & Mini Puppy Healthy Start (chiot petit gabarit) | 7 (+2 candidats) |
+| Royal Canin (Size Health Nutrition) | Mini Adult | Medium Adult | Maxi Adult | Medium Puppy | Medium Ageing 10+ | X-Small Sterilised | Maxi Digestive Care | — | 7 |
+| Purina (Pro Plan) | Small & Mini Adult Everyday Nutrition | Medium Adult Everyday Nutrition | Large Athletic Adult Everyday Nutrition | Medium Puppy Healthy Start | Medium & Large Adult 7+ Age Defence | All Sizes Adult Light / Sterilised poisson blanc | Medium & Large Adult Sensitive Digestion Grain Free dinde | Small & Mini Puppy Healthy Start (chiot petit gabarit) | 8 |
 | Hill's (Science Plan) | Small & Mini Adult poulet | Adult Medium poulet | Adult Large Breed agneau + riz | Puppy Medium poulet | Senior Vitality Mature 7+ Small & Mini poulet + riz | Perfect Weight Adult Large Breed poulet | Perfect Digestion Adult Medium poulet + riz complet | — | 7 |
-| Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet (candidat : Medium-Maxi Light in Fat avec du Poulet) | — | Petit Junior avec du Poulet (chiot petit gabarit) | 4 (+2 candidats) |
+| Ultima | Petit Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet | Medium-Maxi Adulte avec du Poulet (même produit qu'en S2 : gabarits moyen et grand) | — | Medium-Maxi Senior avec du Poulet | Petit Stérilisé avec du Poulet | — | — | 4 |
 | Real Nature (Wilderness) | Mini Adult Green Coast (canard, saumon, crevettes) | Adult True Country (poulet, poisson) | Adult grande taille Wide Savannah (sanglier, agneau, canard) | Maxi Junior Pur Canard | Senior True Country (poulet, poisson) | — | — | — | 5 |
 | Josera (gamme principale) | Mini Chicken & Rice | Medi/Maxi Chicken & Rice | Medi/Maxi Chicken & Rice (même produit qu'en S2 : moyennes et grandes races) | Kids | Balance (senior) | — | SensiPlus | — | 5 |
-| Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 6 (+1 candidat) |
+| Acana | Adult Small Breed Recipe | Adult Dog Recipe | Adult Large Breed Recipe | Puppy Large Breed Recipe | Senior Recipe | Light & Fit Recipe | — | Puppy Small Breed Recipe (chiot petit gabarit) | 7 |
 | Eukanuba (Life Care) | Adulte petites races poulet frais | Adulte moyennes races poulet frais | Adulte grandes races poulet frais | Chiot grandes races agneau et riz | Senior moyennes races poulet frais | — | — | — | 5 |
 | Select Gold (Complete, Light, Sensitive) | Complete Mini Adulte Poulet | Complete Medium Adulte Poulet | Complete Maxi Adulte Bœuf | Complete Maxi Junior Poulet | Complete Medium Senior Poulet | Light Medium Adulte Poulet | Sensitive Medium Adulte Cheval au tapioca | — | 7 |
 | Edgard & Cooper | — | Adulte Poulet Frais (toutes tailles) | — | Chiot Canard et Poulet frais (toutes tailles) | Senior Poulet & Saumon Frais | — | — | — | 3 |
-| Nature's Variety (No Grain) | No Grain Mini Adulte Poulet | No Grain Adulte Medium/Maxi Poulet | No Grain Adulte Medium/Maxi Poulet (même produit qu'en S2 : plus de 10 kg) | No Grain Puppy Medium/Maxi Saumon | — | — | — | No Grain Chiot Mini Saumon (chiot petit gabarit) | 3 (+1 candidat) |
-| **Marques par segment** | 10 | 11 | 10 | 10 | 10 | 6 | 5 | | |
+| Nature's Variety (No Grain) | No Grain Mini Adulte Poulet | No Grain Adulte Medium/Maxi Poulet | No Grain Adulte Medium/Maxi Poulet (même produit qu'en S2 : plus de 10 kg) | No Grain Puppy Medium/Maxi Saumon | — | — | — | — | 3 |
+| **Marques par segment** | 10 | 11 | 10 | 10 | 10 | 6 | 5 | 2 | **61** |
 
 ## 6. Journal des vérifications
 
@@ -309,7 +310,14 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
   suffisant ; leur identification et leur vérification auraient demandé un effort disproportionné.
 - **Virbac Veterinary HPM écartée (26/11/2026)** : gamme vétérinaire par son nom et sa diffusion (RG-02) ; aucune source de prix
   éligible fiable.
-- **Fin de la collecte (26/11/2026)** : toutes les candidates ont été étudiées ; prochaine étape, filtrage final.
+- **Fin de la collecte (26/11/2026)** : toutes les candidates ont été étudiées.
+- **Filtrage final (26/11/2026)** : option A retenue. Les 59 produits des segments sont conservés, ainsi que 2 chiots de petit
+  gabarit hors segment (Pro Plan Small & Mini Puppy Healthy Start, deux sources de prix ; Acana Puppy Small Breed, humidité déclarée),
+  soit **61 produits de 11 marques**. Candidats non retenus : Royal Canin Maxi Puppy, Pro Plan Large Athletic Puppy Sensitive
+  Digestion, Ultima Medium-Maxi Light in Fat, Ultima Petit Junior, Nature's Variety No Grain Chiot Mini Saumon.
+  Raisons : la couverture de la section 3 bis est complète, et la variété (protéines, gammes, sources de prix) sert la démonstration.
+  Conséquences : la cible « 30 à 45 produits » de l'expression des besoins est révisée ; le catalogue est saisi principalement par
+  un fichier de données et un script d'import, le back-office servant à la démonstration sur quelques produits.
 - **Produits sans gabarit (26/11/2026)** : une recette adulte destinée à toutes les tailles est rangée en S2 dans la matrice ;
   dans l'application, son gabarit est « tous » et elle répond à tous les filtres de taille (cas d'Acana Adult Dog, Real Nature
   True Country, Edgard & Cooper).

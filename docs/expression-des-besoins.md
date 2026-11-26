@@ -1,6 +1,6 @@
 # Expression des besoins — comparateur-croquettes
 
-> Version 1.5 — 25 novembre 2026 (RG-03 : conditions du prix relevé). Version 1.4 du 14 novembre 2026 (redirections après inscription et connexion, ajout aux favoris après connexion). Version 1.3 du 22 octobre 2026 (US-25, RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
+> Version 1.5 — 26 novembre 2026 (RG-03 : conditions du prix relevé ; indicateurs de volume révisés). Version 1.4 du 14 novembre 2026 (redirections après inscription et connexion, ajout aux favoris après connexion). Version 1.3 du 22 octobre 2026 (US-25, RG-22). Version 1.2 du 18 octobre 2026 (US-23, US-24, RG-21). Version 1.1 validée le 24 septembre 2026.
 > Les éléments marqués **(à valider)** restent à arrêter en conception.
 > Les éléments marqués **(hypothèse)** ne sont pas démontrés et ne doivent pas être présentés comme des faits.
 
@@ -79,8 +79,8 @@ Plusieurs comparateurs existent en France (analyse réalisée en septembre 2026)
 
 | Indicateur | Cible |
 |---|---|
-| Produits publiés et vérifiés | 30 à 45 |
-| Marques couvertes | 10 à 12 |
+| Produits publiés et vérifiés | 61 (sélection figée, voir selection-produits.md) |
+| Marques couvertes | 11 |
 | Produits comparables simultanément | 2 à 4 |
 | Couverture des user stories MVP | 100 % des critères d'acceptation validés |
 | Accessibilité | Aucune erreur bloquante à l'audit automatique ; vérification manuelle des critères RGAA principaux |
@@ -462,7 +462,7 @@ En tant que visiteur, je veux accéder aux mentions légales, à la politique de
 | ID | Élément | Statut |
 |---|---|---|
 | H-01 | La cible du site achète majoritairement en circuit spécialisé ou en ligne | Hypothèse non démontrée à l'échelle du marché |
-| H-02 | 30 à 45 produits suffisent à démontrer l'intérêt du comparateur | Hypothèse |
+| H-02 | Un catalogue d'une soixantaine de produits couvrant tous les filtres suffit à démontrer l'intérêt du comparateur | Hypothèse (volume révisé le 26/11/2026 : 61 produits) |
 | PO-01 | Chiffres de la source secondaire de marché | À vérifier avant citation |
 | PO-02 | Rôle exact de la base NoSQL et de l'import Open Pet Food Facts | Conception |
 | PO-03 | Stack technique | Conception |
