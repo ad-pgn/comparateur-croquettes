@@ -1,7 +1,7 @@
 # Sélection des produits
 
 > Issue #12. Document de travail : il est complété au fil des vérifications, puis figé avant la saisie du catalogue.
-> Version 0.14 — 26 novembre 2026 (11 marques retenues ; Purina ONE, Advance et Lily's Kitchen écartées ; nouvelles candidates repérées chez Animalis). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
+> Version 0.15 — 26 novembre 2026 (collecte terminée : 11 marques retenues, 6 écartées). Version 0.3 du 23 novembre 2026 (Royal Canin, règle du prix relevé, collecte large puis filtrage). Version 0.1 du 14 novembre 2026.
 
 ## 1. Objectif
 
@@ -71,9 +71,9 @@ Légende : ✓ vérifié · ✗ éliminatoire · ? à vérifier. Chaque vérific
 | 11 | Edgard & Cooper | ✓ | ✓ vente directe, Zooplus, Truffaut (adulte) | ✓ contrôle visuel (énergie déclarée, humidité non déclarée) | Retenue |
 | 12 | Nature's Variety (No Grain) | ✓ | ✓ Maxi Zoo, Animalis, Zooplus ; fiches Truffaut non retenues | ✓ contrôle visuel (humidité et énergie non déclarées) | Retenue |
 | 13 | Lily's Kitchen | ✓ | ✓ Truffaut, Zooplus, Animalis | ✗ pas de site officiel français | Écartée (étape 3) |
-| 14 | Marque propre Truffaut (nom à identifier) | ? | ? | ? | |
-| 15 | True Origins (Pure, Wild), probable marque propre d'Animalis | ? | ? | ? | |
-| 16 | Virbac Veterinary HPM | ? | ? | ? | Éligibilité douteuse (RG-02) |
+| 14 | Marque propre Truffaut (nom à identifier) | — | — | — | Écartée (décision du 26/11/2026) |
+| 15 | True Origins (Pure, Wild), probable marque propre d'Animalis | — | — | — | Écartée (décision du 26/11/2026) |
+| 16 | Virbac Veterinary HPM | ✗ gamme vétérinaire (RG-02) | ✗ Zooplus : vendeurs partenaires ; Truffaut : fiches sans référence | — | Écartée (étape 1) |
 | 17 | Réserve (repérées chez Animalis le 26/11/2026) : Ownat, Natura Diet, Pro-Nutrition Flatazor, Orijen, Wellness, Carnilove, Taste of the Wild | ? | ? | ? | À étudier si un segment manque de marques |
 
 ## 5. Matrice marque × segment
@@ -259,6 +259,7 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
 | 26/11/2026 | No Grain Chiot Mini Saumon (hors segment) | Prix | https://www.maxizoo.fr/p/natures-variety-no-grain-chiot-mini-saumon-15kg-2035046/ | ✓ Chiot mini, 2 à 12 mois ; 1,5 kg |
 | 26/11/2026 | Lily's Kitchen | Données officielles | Recherche web | ✗ Pas de site officiel français trouvé (site britannique, recettes possiblement différentes) ; gamme française limitée aux adultes toutes tailles |
 | 26/11/2026 | Animalis | Marques | https://www.animalis.com/chiens/alimentation/croquettes/?start=0&page=1 | 48 marques de croquettes chien ; Purina ONE et Advance absentes (confirmé) |
+| 26/11/2026 | Virbac Veterinary HPM | Éligibilité (RG-02) | https://pro-fr.virbac.com/files/live/sites/virbac-b2b-fr/files/Gammes/Nutrition/revamping/sous-main-gamme-nutritionnelle-hpm.pdf | ✗ Gamme présentée comme vétérinaire (nom « Veterinary », diffusion auprès des vétérinaires) ; Zooplus : offres de vendeurs partenaires (9980) ; Truffaut : fiches sans numéro de référence |
 
 ## 7. Décisions
 
@@ -304,6 +305,11 @@ Les prix sont seulement constatés à ce stade ; les relevés officiels (RG-03) 
   la marque n'aurait de toute façon couvert que S2, déjà largement fourni.
 - **Fiches Truffaut sans numéro de référence (26/11/2026)** : les fiches dont l'adresse ne se termine pas par un numéro de
   référence Truffaut se sont toutes révélées indisponibles ou partagées avec des vendeurs partenaires ; elles ne sont pas retenues.
+- **Marques propres de Truffaut et d'Animalis écartées (26/11/2026)** : le nombre de marques (11) et de produits (environ 62) est
+  suffisant ; leur identification et leur vérification auraient demandé un effort disproportionné.
+- **Virbac Veterinary HPM écartée (26/11/2026)** : gamme vétérinaire par son nom et sa diffusion (RG-02) ; aucune source de prix
+  éligible fiable.
+- **Fin de la collecte (26/11/2026)** : toutes les candidates ont été étudiées ; prochaine étape, filtrage final.
 - **Produits sans gabarit (26/11/2026)** : une recette adulte destinée à toutes les tailles est rangée en S2 dans la matrice ;
   dans l'application, son gabarit est « tous » et elle répond à tous les filtres de taille (cas d'Acana Adult Dog, Real Nature
   True Country, Edgard & Cooper).
