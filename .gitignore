@@ -30,3 +30,8 @@ Desktop.ini
 
 # Sauvegardes automatiques de Looping
 *.lo[0-9]
+
+
+# Next.js
+.next/
+out/

@@ -663,7 +663,20 @@
   passage automatique en Done à la fermeture d'une issue ou à la fusion d'une pull request ;
   ajout automatique des nouvelles issues et pull requests.
 
+  ### Étape 4.6 — Issues du socle technique (27/11/2026)
+- 9 tâches créées pour le milestone M2 (#56 à #64), dans l'ordre de réalisation : structure du dépôt, Docker,
+  script SQL, utilisateurs MySQL, API, connexion aux bases, application Next.js, linting, intégration continue.
+- Création par `gh issue create` avec un fichier Markdown par issue (`--body-file`), labels et milestone.
+- Le script d'import des 61 produits est rattaché au M4 (Catalog administration) : il dépend du schéma et des connexions.
+
 ## 5. Développement
+
+### Issue #56 — Structure du dépôt (27/11/2026)
+- Dossiers `api/`, `web/` et `database/` créés, chacun avec un README.
+- Node.js 26 (LTS active depuis octobre 2026) fixé dans `.nvmrc`, utilisé aussi par l'intégration continue.
+- `.editorconfig` (UTF-8, LF, 2 espaces) et `.gitattributes` (fins de ligne LF imposées dans le dépôt,
+  pour éviter les différences dues à Windows).
+- Champ `engines` des `package.json` : renseigné à leur création (#60, #62).
 
 ## 6. Tests
 
@@ -676,6 +689,15 @@
   la chaîne se termine trop tôt et la suite est interprétée comme une commande.
 - Solution : expression jq sans guillemets imbriqués (`--jq ".[].title"`).
 - Enseignement : vérifier la compatibilité d'une commande avec le shell utilisé (PowerShell sous Windows, Bash sous Linux).
+
+### Difficulté : `node -v` affiche l'ancienne version après installation (27/11/2026)
+- Problème : après l'installation de Node.js 26 depuis nodejs.org, `node -v` affichait toujours la version 24.10.
+- Cause : nvm-windows était déjà installé (`C:\nvm4w`) ; son dossier passe avant `C:\Program Files\nodejs`
+  dans le PATH, donc Windows utilisait la version active de nvm.
+- Diagnostic : `Get-Command node -All` liste tous les `node.exe` trouvés, dans l'ordre de priorité.
+- Solution : installation de Node 26 avec nvm (`nvm install`, puis `nvm use`), désinstallation du doublon de nodejs.org.
+- Enseignement : un gestionnaire de versions installé devient le seul point d'entrée pour changer de version ;
+  nvm-windows ne lit pas `.nvmrc`, qui sert de référence au projet et à l'intégration continue.
 
 ## 8. Veille technologique et sécurité
 
