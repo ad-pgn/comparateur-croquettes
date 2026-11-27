@@ -2,7 +2,7 @@
 
 Comparateur factuel de croquettes pour chiens commercialisées en France.
 
-> Projet en cours — phase de conception. Aucune fonctionnalité n'est encore développée.
+> Projet en cours — phase de développement (socle technique). Aucune fonctionnalité n'est encore disponible.
 
 ## Présentation
 
@@ -15,7 +15,7 @@ Projet réalisé dans le cadre du titre professionnel Développeur Web et Web Mo
 Fact-based web app to compare dog kibble sold in France: compare specific products side by side,
 with their real cost (price per kg by bag size, dated) and the source of every data point.
 Final project for the French "Développeur Web et Web Mobile" professional certification.
-Status: design phase — no feature implemented yet.
+Status: development phase (technical foundation) — no feature available yet.
 
 ## Documentation
 
@@ -32,7 +32,7 @@ Status: design phase — no feature implemented yet.
 
 ## Stack technique
 
-Choix validés en phase de conception. Mise en place à venir.
+Choix validés en phase de conception. Mise en place en cours (milestone M2).
 
 | Couche | Technologies |
 |---|---|
@@ -43,6 +43,25 @@ Choix validés en phase de conception. Mise en place à venir.
 | Tests | Vitest, Supertest |
 | Qualité | ESLint, Prettier, GitHub Actions |
 | Environnement de développement | Docker (bases de données) |
+
+## Installation
+
+> Section complétée au fil du milestone M2.
+
+### Prérequis
+
+- [Node.js](https://nodejs.org/) 26 (version fixée dans `.nvmrc`)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (bases de données en conteneurs)
+- [Git](https://git-scm.com/)
+
+### Structure du dépôt
+
+| Dossier | Contenu |
+|---|---|
+| `api/` | API REST Express |
+| `web/` | Application Next.js |
+| `database/` | Scripts SQL et d'initialisation MongoDB |
+| `docs/` | Documentation |
 
 ## Données
 
